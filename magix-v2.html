@@ -561,7 +561,7 @@ document.querySelector('.burger').addEventListener('click',()=>{const l=document
   draw();
   // typewriter
   var typed=document.getElementById('typed'),cur=document.getElementById('cursor');
-  var text='שנות ה-90 נגמרו מזמן. האתר שלכם עדיין תקוע שם. הגיע הזמן לצאת משם.';
+  var text='שנות ה-90 נגמרו מזמן. האתר שלכם עוד תקוע שם. בואו נבנה לכם אחד שמרגיש כמו 2026.';
   var i=0;
   setTimeout(function tick(){ if(i<=text.length){ if(typed){typed.textContent=text.slice(0,i);} i++; setTimeout(tick,42);} else if(cur){cur.classList.add('off');} },600);
   // pills fade-in (independent of typing)
