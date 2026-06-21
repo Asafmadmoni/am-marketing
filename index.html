@@ -463,7 +463,7 @@
   <header id="hd">
     <div class="wrap"><nav>
       <a href="#top" class="brand"><img src="am-logo.png" alt="AM Marketing">AM MARKETING</a>
-      <div class="nav-mid"><a href="#services">שירותים</a><a href="#perf">לידים</a><a href="#work">עבודות</a><a href="blog.html">בלוג</a><a href="#about">עלינו</a></div>
+      <div class="nav-mid"><a href="#services">שירותים</a><a href="#perf">לידים</a><a href="#work">עבודות</a><a href="#magix">אתרים</a><a href="blog.html">בלוג</a><a href="#about">עלינו</a></div>
       <a href="#contact" class="nav-cta">בואו נדבר <span class="ar">←</span></a>
     </nav></div>
   </header>
@@ -547,6 +547,12 @@
     .appr-stats .v{font-weight:900;font-size:clamp(30px,4vw,44px);letter-spacing:-.03em;line-height:1;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
     .appr-stats .k{margin-top:9px;font-size:11.5px;font-weight:600;letter-spacing:.13em;color:var(--dim)}
     @media(max-width:680px){.pnode{width:44px;height:44px}.pnode svg{width:21px;height:21px}.pnode.big{width:52px;height:52px}.pnode.big svg{width:26px;height:26px}.appr-stats{gap:16px 34px}.approach .appr-head p{font-size:15px}}
+    @keyframes pnodeGlow{0%,100%{box-shadow:0 14px 30px -10px rgba(0,0,0,.75),0 0 16px rgba(176,107,255,.16)}50%{box-shadow:0 14px 30px -10px rgba(0,0,0,.75),0 0 30px rgba(176,107,255,.38)}}
+    @keyframes pnodeGlowBig{0%,100%{box-shadow:0 16px 38px -10px rgba(0,0,0,.8),0 0 26px rgba(255,45,126,.24)}50%{box-shadow:0 16px 38px -10px rgba(0,0,0,.8),0 0 46px rgba(255,45,126,.46)}}
+    .pnode{animation:pnodeGlow 5.5s var(--ease) infinite}
+    .pnode.big{animation:pnodeGlowBig 5.5s var(--ease) infinite}
+    .pnode:nth-of-type(2){animation-delay:-.8s}.pnode:nth-of-type(3){animation-delay:-1.6s}.pnode:nth-of-type(4){animation-delay:-2.4s}.pnode:nth-of-type(5){animation-delay:-3.2s}.pnode:nth-of-type(6){animation-delay:-4s}.pnode:nth-of-type(7){animation-delay:-4.8s}
+    @media(prefers-reduced-motion:reduce){.pnode,.pnode.big{animation:none}}
   </style>
   <section class="sec approach" id="approach"><div class="glow"></div><div class="wrap">
     <div class="appr-head anim fade">
@@ -560,8 +566,8 @@
           <linearGradient id="cedge" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#b06bff"/><stop offset="1" stop-color="#ff2d7e"/></linearGradient>
           <filter id="cglow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="2.4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
         </defs>
-        <line class="edge" x1="90" y1="225" x2="130" y2="300"/><line class="edge" x1="130" y1="300" x2="210" y2="350"/><line class="edge" x1="130" y1="300" x2="255" y2="175"/><line class="edge" x1="130" y1="300" x2="300" y2="290"/><line class="edge" x1="255" y1="175" x2="350" y2="128"/><line class="edge" x1="255" y1="175" x2="375" y2="255"/><line class="edge" x1="350" y1="128" x2="490" y2="120"/><line class="edge" x1="375" y1="255" x2="300" y2="290"/><line class="edge" x1="375" y1="255" x2="490" y2="120"/><line class="edge" x1="375" y1="255" x2="450" y2="328"/><line class="edge" x1="375" y1="255" x2="575" y2="250"/><line class="edge" x1="490" y1="120" x2="575" y2="250"/><line class="edge" x1="490" y1="120" x2="620" y2="128"/><line class="edge" x1="575" y1="250" x2="620" y2="128"/><line class="edge" x1="575" y1="250" x2="745" y2="195"/><line class="edge" x1="575" y1="250" x2="655" y2="330"/><line class="edge" x1="575" y1="250" x2="525" y2="360"/><line class="edge" x1="620" y1="128" x2="745" y2="195"/><line class="edge" x1="745" y1="195" x2="705" y2="288"/><line class="edge" x1="745" y1="195" x2="835" y2="250"/><line class="edge" x1="655" y1="330" x2="705" y2="288"/><line class="edge" x1="655" y1="330" x2="525" y2="360"/><line class="edge" x1="705" y1="288" x2="835" y2="250"/><line class="edge" x1="835" y1="250" x2="882" y2="348"/><line class="edge" x1="705" y1="288" x2="882" y2="348"/><line class="edge" x1="210" y1="350" x2="300" y2="290"/><line class="edge" x1="300" y1="290" x2="450" y2="328"/><line class="edge" x1="450" y1="328" x2="525" y2="360"/><line class="edge" x1="90" y1="225" x2="210" y2="350"/>
-        <circle class="nd" cx="90" cy="225" r="3.2"/><circle class="nd p" cx="210" cy="350" r="2.8"/><circle class="nd" cx="350" cy="128" r="2.8"/><circle class="nd p" cx="450" cy="328" r="3.2"/><circle class="nd" cx="620" cy="128" r="3.2"/><circle class="nd p" cx="705" cy="288" r="2.8"/><circle class="nd" cx="835" cy="250" r="3.2"/><circle class="nd p" cx="882" cy="348" r="2.6"/><circle class="nd" cx="300" cy="290" r="2.8"/><circle class="nd p" cx="525" cy="360" r="3"/>
+        <line class="edge" x1="130" y1="300" x2="210" y2="350"/><line class="edge" x1="130" y1="300" x2="255" y2="175"/><line class="edge" x1="130" y1="300" x2="300" y2="290"/><line class="edge" x1="255" y1="175" x2="350" y2="128"/><line class="edge" x1="255" y1="175" x2="375" y2="255"/><line class="edge" x1="350" y1="128" x2="490" y2="120"/><line class="edge" x1="375" y1="255" x2="300" y2="290"/><line class="edge" x1="375" y1="255" x2="490" y2="120"/><line class="edge" x1="375" y1="255" x2="450" y2="328"/><line class="edge" x1="375" y1="255" x2="575" y2="250"/><line class="edge" x1="490" y1="120" x2="575" y2="250"/><line class="edge" x1="490" y1="120" x2="620" y2="128"/><line class="edge" x1="575" y1="250" x2="620" y2="128"/><line class="edge" x1="575" y1="250" x2="745" y2="195"/><line class="edge" x1="575" y1="250" x2="655" y2="330"/><line class="edge" x1="575" y1="250" x2="525" y2="360"/><line class="edge" x1="620" y1="128" x2="745" y2="195"/><line class="edge" x1="745" y1="195" x2="705" y2="288"/><line class="edge" x1="655" y1="330" x2="705" y2="288"/><line class="edge" x1="655" y1="330" x2="525" y2="360"/><line class="edge" x1="210" y1="350" x2="300" y2="290"/><line class="edge" x1="300" y1="290" x2="450" y2="328"/><line class="edge" x1="450" y1="328" x2="525" y2="360"/>
+        <circle class="nd p" cx="210" cy="350" r="2.8"/><circle class="nd" cx="350" cy="128" r="2.8"/><circle class="nd p" cx="450" cy="328" r="3.2"/><circle class="nd" cx="620" cy="128" r="3.2"/><circle class="nd p" cx="705" cy="288" r="2.8"/><circle class="nd" cx="300" cy="290" r="2.8"/><circle class="nd p" cx="525" cy="360" r="3"/>
       </svg>
       <div class="pnode" style="left:13%;top:65.2%" title="Google Ads"><svg viewBox="0 0 24 24"><rect x="9" y="1.6" width="6" height="15" rx="3" fill="#FBBC04" transform="rotate(-28 12 9)"/><rect x="9" y="7.4" width="6" height="15" rx="3" fill="#4285F4" transform="rotate(28 12 15)"/><circle cx="6.6" cy="17.4" r="3.2" fill="#34A853"/></svg></div>
       <div class="pnode" style="left:25.5%;top:38%" title="Facebook"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#1877F2"/><path fill="#fff" d="M14.7 12.6h-2V21h-2.8v-8.4H8.4v-2.5h1.5V8.4c0-1.9 1.1-2.95 2.9-2.95.83 0 1.7.1 1.7.1v2.2h-1.05c-.9 0-1.15.5-1.15 1.1v1.25h2.3l-.4 2.5z"/></svg></div>
@@ -612,6 +618,56 @@
       <a href="https://yesh-collective.co.il/" target="_blank" rel="noopener" class="work-card anim fade"><div class="wc-media"><div class="wc-bar"><i></i><i></i><i></i></div><img src="am-w6.png" alt="Yesh Collective" loading="lazy"></div><div class="wc-body"><div><div class="k">ביטוח ושירות</div><h4>Yesh Collective</h4><div class="res">אתר ומערך לידים</div></div><span class="arr">↗</span></div></a>
     </div>
     <p class="work-note">פרויקטים אמיתיים מלקוחות הסטודיו. לחיצה פותחת את האתר החי.</p>
+  </div></section>
+
+  <!-- MAGIX STUDIO -->
+  <style>
+    .magix-band{position:relative;overflow:hidden}
+    .magix-band .glow{width:720px;height:520px;background:radial-gradient(circle,rgba(176,107,255,.16),transparent 62%);top:-4%;right:6%;opacity:.75}
+    .magix-inner{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:54px;align-items:center;
+      background:linear-gradient(155deg,rgba(28,25,30,.92),rgba(13,11,16,.94));border:1px solid var(--line);border-radius:26px;
+      padding:52px 48px;box-shadow:0 50px 120px -55px rgba(0,0,0,.9)}
+    .magix-logo{font-family:'Heebo',sans-serif;font-weight:800;font-size:clamp(26px,3vw,34px);letter-spacing:.06em;color:var(--cream);margin:16px 0;line-height:1}
+    .magix-logo em{font-style:normal}
+    .magix-band h2{font-weight:800;font-size:clamp(26px,3.4vw,42px);line-height:1.08;letter-spacing:-.035em}
+    .magix-band p{color:var(--muted);font-weight:300;margin-top:16px;font-size:16px;line-height:1.72;max-width:54ch}
+    .magix-cta{display:flex;align-items:center;gap:24px;margin-top:30px;flex-wrap:wrap}
+    .magix-link{font-size:14px;font-weight:600;color:var(--cream);border-bottom:1px solid var(--line);padding-bottom:3px;transition:.2s}
+    .magix-link:hover{border-color:var(--magenta)}
+    .magix-visual{position:relative}
+    .mx-browser{position:relative;z-index:2;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#0e0c11;
+      box-shadow:0 44px 100px -44px rgba(0,0,0,.88);transform:perspective(1700px) rotateY(6deg) rotateX(1.4deg);transition:.6s var(--ease)}
+    .magix-visual:hover .mx-browser{transform:perspective(1700px) rotateY(0) rotateX(0)}
+    .mx-bar{display:flex;align-items:center;gap:7px;padding:0 14px;height:38px;background:linear-gradient(180deg,#231c2b,#171121);border-bottom:1px solid var(--line)}
+    .mx-bar i{width:9px;height:9px;border-radius:50%;background:#3a3340}
+    .mx-bar i:nth-child(1){background:#ff5f57}.mx-bar i:nth-child(2){background:#febc2e}.mx-bar i:nth-child(3){background:#28c840}
+    .mx-shot{display:block;width:100%}
+    .mx-badge{position:absolute;z-index:3;bottom:-16px;right:-12px;background:var(--bg-3);border:1px solid var(--line);border-radius:13px;
+      padding:13px 18px;box-shadow:0 24px 56px -22px rgba(0,0,0,.85)}
+    .mx-badge b{display:block;font-size:17px;font-weight:900;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;letter-spacing:-.02em}
+    .mx-badge span{display:block;font-size:11px;color:var(--dim);margin-top:3px}
+    @media(max-width:880px){.magix-inner{grid-template-columns:1fr;gap:36px;padding:38px 24px}.magix-visual{order:-1}.magix-band p{max-width:none}.mx-browser{transform:none}}
+  </style>
+  <section class="sec magix-band" id="magix"><div class="glow"></div><div class="wrap">
+    <div class="magix-inner anim fade">
+      <div class="magix-copy">
+        <span class="eyebrow"><span class="n">◆</span> סטודיו האתרים שלנו</span>
+        <div class="magix-logo">MAGI<em>X</em></div>
+        <h2>אתר חדש לעסק שלכם, <span class="grad">מוכן עוד לפני שתשלמו.</span></h2>
+        <p>MAGIX הוא סטודיו האתרים של AM Marketing. במקום הצעת מחיר על הנייר, אנחנו בונים לכם דמו אמיתי של אתר חדש, אתם רואים אותו חי, ורק אם אהבתם ממשיכים. בלי סיכון, בלי התחייבות.</p>
+        <div class="magix-cta">
+          <a href="magix-v2.html" class="btn btn-primary mag">לכניסה לסטודיו <span class="ar">←</span></a>
+          <a href="magix-v2.html" class="magix-link">לראות איך זה עובד</a>
+        </div>
+      </div>
+      <div class="magix-visual anim fade">
+        <div class="mx-browser">
+          <div class="mx-bar"><i></i><i></i><i></i></div>
+          <img class="mx-shot" src="am-w3.png" alt="דוגמה לאתר שבונים בסטודיו MAGIX" loading="lazy">
+        </div>
+        <div class="mx-badge"><b>₪0 להתחיל</b><span>רואים דמו אמיתי, ואז מחליטים</span></div>
+      </div>
+    </div>
   </div></section>
 
   <!-- PERFORMANCE -->
