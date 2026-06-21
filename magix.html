@@ -244,9 +244,27 @@ footer{padding:64px 0 32px;border-top:1px solid var(--line);background:var(--bg-
   .svc{grid-template-columns:auto 1fr;gap:18px}.svc .go{display:none}
   .switch{bottom:84px;right:14px;flex-wrap:wrap;max-width:150px;justify-content:center}
 }
+@media(max-width:960px){nav .burger{display:none!important}.nav-cta{display:inline-flex!important;padding:9px 16px;font-size:12.5px;border-radius:9px}.logo-txt{font-size:18px}.logo-txt small{font-size:7px;letter-spacing:.22em}.logo-mark svg{width:23px;height:25px}.brand{gap:9px}.nav-in{gap:12px}}
+@media(max-width:680px){.hero{min-height:auto;padding:96px 0 60px}.hero h1{font-size:33px;line-height:1.04;margin-bottom:18px}.hero .lead{font-size:15.5px;margin-bottom:26px}.cta-row{gap:10px}.btn{padding:13px 22px;font-size:14px}.stats{gap:22px}.stat .v{font-size:28px}.hero-obj{margin-top:26px}.browser{transform:none}.b-shot{height:280px}.demo-badge{right:auto;left:50%;bottom:-16px;transform:translateX(-50%);padding:11px 17px}.demo-badge b{font-size:16px}.nav-cta{font-size:12px;padding:8px 13px}.logo-txt{font-size:16px}section{padding:74px 0}h2{font-size:clamp(28px,8vw,40px)}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.js .reveal{opacity:1;transform:none}#spot{display:none}}
 </style>
-<style>.switch{display:none!important}</style></head>
+<style>.switch{display:none!important}</style><style>
+@media(max-width:700px){
+  .hero-in{grid-template-columns:1fr!important;gap:34px!important}
+  .hero-copy{max-width:100%!important}
+  .hero h1{font-size:26px!important;line-height:1.08!important;letter-spacing:-.03em!important;overflow-wrap:break-word;word-break:break-word}
+  .hero .lead{font-size:15px!important}
+  .stats{gap:20px!important}.stat .v{font-size:25px!important}
+  .browser{transform:none!important}.b-shot{height:265px!important}
+  .demo-badge{right:auto!important;left:50%!important;transform:translateX(-50%)!important;bottom:-16px!important;padding:10px 15px!important}
+  .demo-badge b{font-size:15px!important}
+  nav .burger{display:none!important}
+  .nav-cta{display:inline-flex!important;padding:8px 13px!important;font-size:11.5px!important;border-radius:8px!important}
+  .logo-txt{font-size:16px!important}.logo-txt small{font-size:6.5px!important;letter-spacing:.16em!important}
+  .logo-mark svg{width:21px!important;height:23px!important}.brand{gap:8px!important}
+}
+</style>
+</head>
 <body>
 <div id="spot"></div><div id="prog"></div>
 
