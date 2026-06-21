@@ -244,6 +244,28 @@ footer{padding:64px 0 32px;border-top:1px solid var(--line);background:var(--bg-
   .svc{grid-template-columns:auto 1fr;gap:18px}.svc .go{display:none}
   .switch{bottom:84px;right:14px;flex-wrap:wrap;max-width:150px;justify-content:center}
 }
+.intro h2{font-size:clamp(28px,4.4vw,50px);font-weight:900;line-height:1.06;letter-spacing:-.03em;margin-bottom:16px;max-width:20ch}
+.intro-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin:46px 0 30px}
+.istep{border-top:1px solid var(--line);padding-top:20px}
+.istep .in{font-family:var(--font-display);font-size:15px;font-weight:800;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;letter-spacing:.05em}
+.istep h4{font-size:19px;font-weight:800;margin:11px 0 7px;letter-spacing:-.02em}
+.istep p{font-size:14.5px;color:var(--t3);line-height:1.6}
+.intro-niches{font-size:15px;color:var(--t2);line-height:1.7;max-width:62ch;border-top:1px solid var(--line);padding-top:24px}
+.pricing{background:var(--bg-2)}
+.price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin:44px 0 26px;align-items:stretch}
+.pcard{background:var(--panel);border:1px solid var(--line);border-radius:calc(var(--radius) + 6px);padding:34px 28px;display:flex;flex-direction:column;position:relative}
+.pcard.pop{border-color:color-mix(in srgb,var(--accent) 55%,transparent);box-shadow:0 30px 70px -34px rgba(176,107,255,.45)}
+.pbadge{position:absolute;top:-12px;right:24px;background:var(--grad);color:#fff;font-size:12px;font-weight:700;padding:5px 14px;border-radius:100px}
+.pk{font-size:15px;font-weight:700;color:var(--t2);letter-spacing:.02em}
+.pp{font-family:var(--font-display);font-size:40px;font-weight:900;letter-spacing:-.03em;margin:8px 0 22px;line-height:1}
+.pp span{display:block;font-size:13px;font-weight:400;color:var(--t3);letter-spacing:0;margin-top:5px}
+.pf{list-style:none;margin:0 0 26px;padding:0;flex:1}
+.pf li{font-size:14px;color:var(--t2);padding:9px 0;border-bottom:1px solid var(--line);position:relative;padding-right:19px}
+.pf li::before{content:"";position:absolute;right:0;top:15px;width:7px;height:7px;border-radius:50%;background:var(--grad)}
+.pcard .btn{width:100%;justify-content:center}
+.price-addons{font-size:14px;color:var(--t3);line-height:1.7;text-align:center;max-width:72ch;margin:0 auto}
+.price-addons b{color:var(--t1);font-weight:600}
+@media(max-width:780px){.intro-steps,.price-grid{grid-template-columns:1fr!important;gap:16px}.intro-steps{margin:34px 0 24px}.intro h2{font-size:26px;line-height:1.12}.pp{font-size:32px}.pcard{padding:28px 22px}.price-grid{margin:30px 0 22px}}
 @media(max-width:960px){nav .burger{display:none!important}.nav-cta{display:inline-flex!important;padding:9px 16px;font-size:12.5px;border-radius:9px}.logo-txt{font-size:18px}.logo-txt small{font-size:7px;letter-spacing:.22em}.logo-mark svg{width:23px;height:25px}.brand{gap:9px}.nav-in{gap:12px}}
 @media(max-width:680px){.hero-v2{align-items:flex-end;padding:0 0 46px;min-height:100svh}.typeline{font-size:20px;line-height:1.32;min-height:auto;margin-bottom:20px;overflow-wrap:break-word}.hero-v2-copy{max-width:100%}.hero-cta-v2{font-size:13.5px;padding:12px 20px}.hero-video{object-position:62% center}.hero-tint{opacity:.5}.hero-v2 .scroll-hint{display:none}.nav-cta{font-size:12px;padding:8px 13px}.logo-txt{font-size:16px}section{padding:74px 0}h2{font-size:clamp(28px,8vw,40px)}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.js .reveal{opacity:1;transform:none}#spot{display:none}}
@@ -316,12 +338,21 @@ a.pill:hover{background:var(--grad);color:#fff}
   <div class="scroll-hint">גלול לגלות</div>
 </header>
 
-<div class="clients"><div class="clients-row" id="clients">
-  <span class="c">מוסכים</span><span class="c">אולמות אירועים</span><span class="c">הפקות אירועים</span><span class="c">עיצוב פנים</span><span class="c">גינון ונוף</span><span class="c">מטבחי יוקרה</span><span class="c">רפואה אסתטית</span><span class="c">נדל&quot;ן</span><span class="c">מיזוג אוויר</span><span class="c">אלומיניום</span><span class="c">צימרים</span><span class="c">בנייה ושיפוצים</span><span class="c">מרפאות שיניים</span><span class="c">עורכי דין</span><span class="c">קייטרינג</span><span class="c">חדרי כושר</span><span class="c">ספא ויופי</span><span class="c">בריכות שחייה</span><span class="c">רכב יוקרה</span><span class="c">פרקטים וריצוף</span>
-</div></div>
+<!-- INTRO -->
+<section id="intro" class="intro"><div class="wrap">
+  <div class="tag reveal">מה זה MAGIX</div>
+  <h2 class="reveal">אנחנו בונים לכם אתר, ומראים אותו לפני שאתם משלמים.</h2>
+  <p class="sec-lead reveal">MAGIX הוא שירות בנייה ועיצוב אתרים של AM Marketing. במקום הצעת מחיר על הנייר, אנחנו בונים לכם דמו אמיתי של אתר חדש, אתם רואים אותו חי, ורק אם אהבתם, ממשיכים. בלי סיכון, בלי התחייבות.</p>
+  <div class="intro-steps">
+    <div class="istep reveal"><span class="in tnum">01</span><h4>סורקים ומאתרים</h4><p>מאתרים עסקים עם אתר חלש או מיושן, ובונים רשימה קצרה.</p></div>
+    <div class="istep reveal"><span class="in tnum">02</span><h4>בונים דמו אמיתי</h4><p>מעצבים ובונים גרסה חדשה לאתר שלכם, עוד לפני שדיברנו.</p></div>
+    <div class="istep reveal"><span class="in tnum">03</span><h4>אתם מחליטים</h4><p>מראים לכם, ואם זה מדבר אליכם, ממשיכים יחד עד שזה באוויר.</p></div>
+  </div>
+  <p class="intro-niches reveal">עובדים עם עסקים בתחומים כמו מוסכים, אולמות והפקות אירועים, עיצוב פנים, מטבחי יוקרה, נדל&quot;ן, רפואה אסתטית, צימרים ועוד.</p>
+</div></section>
 
 <section id="services"><div class="wrap">
-  <div class="svc-head reveal"><div class="tag">מה אנחנו עושים</div><h2>שירות אחד,<br><span class="g">מקצה לקצה.</span></h2></div>
+  <div class="svc-head reveal"><div class="tag">מה אנחנו עושים</div><h2>שירות אחד, מקצה לקצה.</h2></div>
   <div class="svc-list">
     <a href="#contact" class="svc reveal"><span class="n tnum">01</span><div class="st"><h3>אתר חדש שמפיל לסת</h3><p>עיצוב מקורי שנבנה במיוחד לעסק שלכם, לא תבנית גנרית. אתר שגורם ללקוח להבין שאתם מקצוענים עוד לפני שדיבר איתכם.</p></div><span class="go">↖</span></a>
     <a href="#contact" class="svc reveal"><span class="n tnum">02</span><div class="st"><h3>מותאם לנייד וממיר לידים</h3><p>80% מהגולשים בישראל מהטלפון. אתר מהיר וברור, עם כפתורי פעולה שמכניסים פניות, לא רק צפיות.</p></div><span class="go">↖</span></a>
@@ -329,9 +360,54 @@ a.pill:hover{background:var(--grad);color:#fff}
   </div>
 </div></section>
 
+<!-- PRICING -->
+<section id="pricing" class="pricing"><div class="wrap">
+  <div class="sec-head reveal"><div class="tag">תמחור</div><h2>שלוש חבילות. בלי הפתעות.</h2><p class="sec-lead">בנייה חד-פעמית, שנה ראשונה של אחסון ותחזוקה כלולה במחיר, ואז ₪100 לחודש בלבד. הכל שקוף מראש.</p></div>
+  <div class="price-grid">
+    <div class="pcard reveal">
+      <div class="pk">דף נחיתה</div>
+      <div class="pp tnum">₪5,500<span>חד פעמי</span></div>
+      <ul class="pf">
+        <li>דף נחיתה אחד שממיר</li>
+        <li>עיצוב מותאם אישית</li>
+        <li>מותאם לנייד במלואו</li>
+        <li>טופס לידים ומעקב בסיסי</li>
+        <li>שנה תמיכה ואחסון כלולה</li>
+      </ul>
+      <a href="#contact" class="btn btn-2">רוצה דמו</a>
+    </div>
+    <div class="pcard pop reveal">
+      <div class="pbadge">הכי נמכר</div>
+      <div class="pk">אתר עסקי</div>
+      <div class="pp tnum">₪12,000<span>חד פעמי</span></div>
+      <ul class="pf">
+        <li>אתר תדמית מלא, עד 6 עמודים</li>
+        <li>עיצוב מקורי בהתאמה אישית</li>
+        <li>מותאם לנייד וממיר לידים</li>
+        <li>SEO בסיסי ומעקב המרות</li>
+        <li>שנה תמיכה ואחסון כלולה</li>
+      </ul>
+      <a href="#contact" class="btn btn-1">בואו נתחיל <span class="ar">←</span></a>
+    </div>
+    <div class="pcard reveal">
+      <div class="pk">חנות / פרימיום</div>
+      <div class="pp tnum">₪25,000<span>ומעלה</span></div>
+      <ul class="pf">
+        <li>חנות או אתר מורכב</li>
+        <li>עיצוב פרימיום ואנימציות</li>
+        <li>אינטגרציות, תשלומים ומערכות</li>
+        <li>SEO מתקדם וקידום GEO</li>
+        <li>שנה תמיכה ואחסון כלולה</li>
+      </ul>
+      <a href="#contact" class="btn btn-2">דברו איתנו</a>
+    </div>
+  </div>
+  <p class="price-addons reveal"><b>תוספות אופציונליות:</b> בלוג ומאמרים, SEO מתקדם, קידום GEO למנועי AI, עמודים נוספים. &nbsp;·&nbsp; <b>אחרי השנה הראשונה:</b> ₪100 לחודש לאחסון, תחזוקה ועדכונים.</p>
+</div></section>
+
 <section id="stack"><div class="wrap tools-head reveal">
   <div class="tag">הסטאק שלנו</div>
-  <h2>בונים עם הכלים<br><span class="g">שהמקצוענים עובדים איתם.</span></h2>
+  <h2>בונים עם הכלים שהמקצוענים עובדים איתם.</h2>
   <p class="sec-lead">אותם כלים שבונים בהם את האתרים והקמפיינים של המותגים הגדולים, עכשיו בשירות העסק שלכם.</p>
 </div>
 <div class="tools-strip"><div class="tools-row" id="tools">
@@ -360,7 +436,7 @@ a.pill:hover{background:var(--grad);color:#fff}
 <section id="why" class="why"><div class="wrap why-grid">
   <div class="reveal">
     <div class="tag">למה MAGIX</div>
-    <h2>אתם רואים<br>לפני <span class="g">שאתם משלמים.</span></h2>
+    <h2>אתם רואים, לפני שאתם משלמים.</h2>
     <p class="sec-lead">רוב הסוכנויות מבקשות שתשלמו על סמך הבטחה. אנחנו עושים את ההפך: בונים לכם דמו אמיתי, ורק אז מדברים.</p>
     <div class="why-points">
       <div class="wp"><span class="wn tnum">01</span><div><h4>בונים לפני שמשלמים</h4><p>אנחנו בונים לכם דמו אמיתי. רואים ומחליטים. בלי סיכון, בלי התחייבות.</p></div></div>
@@ -379,7 +455,7 @@ a.pill:hover{background:var(--grad);color:#fff}
 <section id="contact"><div class="wrap contact-grid">
   <div class="ci reveal">
     <div class="tag">דברו איתנו</div>
-    <h2>בואו נבנה לכם <span class="g">משהו אמיתי.</span></h2>
+    <h2>בואו נבנה לכם משהו אמיתי.</h2>
     <p class="sec-lead" style="margin-bottom:30px">השאירו פרטים ונחזור אליכם תוך יום עסקים. נראה לכם דוגמאות, נבין מה אתם צריכים, ונקבע שיחה קצרה. בלי לחץ.</p>
     <a href="https://wa.me/972500000000" class="clink"><b>וואטסאפ</b><span class="tnum">לחצו לשיחה מהירה</span></a>
     <a href="mailto:hello@am-marketing.co.il" class="clink"><b>אימייל</b><span>hello@am-marketing.co.il</span></a>
@@ -498,6 +574,7 @@ document.querySelector('.burger').addEventListener('click',()=>{const l=document
   var VIDEO_URL="magix-bg-smooth.mp4"; /* all-keyframe clip for instant seeking */
   var v=document.getElementById('bgvideo'); if(!v){return;}
   v.src=VIDEO_URL;
+  if(!matchMedia('(hover:hover) and (pointer:fine)').matches){ v.loop=true; v.addEventListener('loadeddata',function(){v.classList.add('ready'); v.play().catch(function(){});}); return; }
   var SENS=0.9,prevX=null,target=0,eased=0,ready=false;
   v.addEventListener('loadeddata',function(){ v.classList.add('ready'); if(v.duration){ target=eased=v.duration*0.4; } ready=true; });
   addEventListener('mousemove',function(e){ if(prevX!==null&&ready&&v.duration){ target+=((e.clientX-prevX)/innerWidth)*SENS*v.duration; if(target<0){target=0;} if(target>v.duration){target=v.duration;} } prevX=e.clientX; },{passive:true});
