@@ -31,7 +31,9 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@300;400;500;600;700;800;900&family=Heebo:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="am-hero.jpg" fetchpriority="high">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@300;400;500;600;700;800;900&family=Heebo:wght@300;400;500;700;800;900&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@300;400;500;600;700;800;900&family=Heebo:wght@300;400;500;700;800;900&display=swap"></noscript>
 <style>
   :root{
     --bg:#0b0a0c; --bg-2:#141215; --bg-3:#1c191e;
@@ -68,7 +70,7 @@
   @keyframes preBar{to{transform:scaleX(1)}}
   @keyframes preOut{to{transform:translateY(-100%);visibility:hidden}}
 
-  html.ready .anim{opacity:0;transform:translateY(34px)}
+  html.ready .anim{transform:translateY(28px)}
   html.ready .anim.fade{transform:none}
 
   /* custom cursor */
@@ -452,7 +454,6 @@
 </style>
 </head>
 <body>
-  <div id="preload"><img class="pl-logo" src="am-logo.png" alt=""><div class="pl-name">AM MARKETING</div><div class="pbar"><span></span></div></div>
   <div class="cur cur-dot" id="curDot"></div>
   <div class="cur cur-ring" id="curRing"></div>
   <div class="cur-label" id="curLabel">צפו באתר ←</div>
@@ -483,7 +484,7 @@
       </div>
       <div class="hero-visual">
         <div class="hero-figure anim fade" id="heroFig">
-          <img src="am-hero.png" alt="AM Marketing" onerror="document.getElementById('heroFig').outerHTML='<div class=\'hero-fallback\'><b>AM</b></div>'">
+          <img src="am-hero.jpg" alt="AM Marketing" width="642" height="860" decoding="async" fetchpriority="high" onerror="document.getElementById('heroFig').outerHTML='<div class=\'hero-fallback\'><b>AM</b></div>'">
         </div>
         <div class="hero-badge b2"><svg aria-hidden="true"><use href="#ic-star"/></svg><b>5.0</b><span class="sub">100+ לקוחות</span></div>
       </div>
@@ -601,13 +602,13 @@
       <p>לא ספק שעושה חתיכה אחת. כל התחומים מדברים אותה שפה, ומרכיבים תמונה אחת שעובדת.</p>
     </div>
     <div class="svc-list">
-      <a href="#contact" class="svc-row anim fade" data-img="am-w1.png"><div class="svc-main"><span class="svc-num">01</span><h3>אתרים <span class="grad">ודפי נחיתה</span></h3><p>אתרים שממירים, לא רק נראים טוב. נטענים מהר, ומובילים לפעולה.</p></div><span class="svc-arrow">↗</span></a>
+      <a href="#contact" class="svc-row anim fade" data-img="am-w1.jpg"><div class="svc-main"><span class="svc-num">01</span><h3>אתרים <span class="grad">ודפי נחיתה</span></h3><p>אתרים שממירים, לא רק נראים טוב. נטענים מהר, ומובילים לפעולה.</p></div><span class="svc-arrow">↗</span></a>
       <a href="#contact" class="svc-row anim fade" data-img="am-logo.png"><div class="svc-main"><span class="svc-num">02</span><h3>מיתוג <span class="grad">ולוגו</span></h3><p>זהות חזותית שמבדלת אתכם מהמתחרים ונשארת בזיכרון.</p></div><span class="svc-arrow">↗</span></a>
-      <a href="#contact" class="svc-row anim fade" data-img="am-w2.png"><div class="svc-main"><span class="svc-num">03</span><h3>קמפיינים <span class="grad">ומדיה</span></h3><p>לידים אמיתיים מגוגל, פייסבוק ואינסטגרם. תקציב שעובד, לא נשרף.</p></div><span class="svc-arrow">↗</span></a>
-      <a href="#contact" class="svc-row anim fade" data-img="am-w5.png"><div class="svc-main"><span class="svc-num">04</span><h3>אסטרטגיה <span class="grad">וצמיחה</span></h3><p>תוכנית פעולה שמודדים אותה במספרים, לא בתחושות.</p></div><span class="svc-arrow">↗</span></a>
-      <a href="#contact" class="svc-row anim fade" data-img="am-w3.png"><div class="svc-main"><span class="svc-num">05</span><h3>קידום <span class="grad">אורגני (SEO)</span></h3><p>להופיע גבוה בתוצאות החיפוש של גוגל ולהביא תנועה איכותית, בלי לשלם על כל קליק.</p></div><span class="svc-arrow">↗</span></a>
-      <a href="#contact" class="svc-row anim fade" data-img="am-w6.png"><div class="svc-main"><span class="svc-num">06</span><h3>אופטימיזציה <span class="grad">למנועי AI (GEO)</span></h3><p>שהמותג שלכם יהיה המקור שמנועי הבינה כמו ChatGPT ו-Google AI מצטטים בתשובות.</p></div><span class="svc-arrow">↗</span></a>
-      <a href="#contact" class="svc-row anim fade" data-img="am-w4.png"><div class="svc-main"><span class="svc-num">07</span><h3>אוטומציות <span class="grad">ובוטים</span></h3><p>חיבור הכלים שלכם למערכת אחת שעובדת לבד: לידים ישר ל-CRM, מעקבים אוטומטיים ובוטים שעונים מסביב לשעון.</p></div><span class="svc-arrow">↗</span></a>
+      <a href="#contact" class="svc-row anim fade" data-img="am-w2.jpg"><div class="svc-main"><span class="svc-num">03</span><h3>קמפיינים <span class="grad">ומדיה</span></h3><p>לידים אמיתיים מגוגל, פייסבוק ואינסטגרם. תקציב שעובד, לא נשרף.</p></div><span class="svc-arrow">↗</span></a>
+      <a href="#contact" class="svc-row anim fade" data-img="am-w5.jpg"><div class="svc-main"><span class="svc-num">04</span><h3>אסטרטגיה <span class="grad">וצמיחה</span></h3><p>תוכנית פעולה שמודדים אותה במספרים, לא בתחושות.</p></div><span class="svc-arrow">↗</span></a>
+      <a href="#contact" class="svc-row anim fade" data-img="am-w3.jpg"><div class="svc-main"><span class="svc-num">05</span><h3>קידום <span class="grad">אורגני (SEO)</span></h3><p>להופיע גבוה בתוצאות החיפוש של גוגל ולהביא תנועה איכותית, בלי לשלם על כל קליק.</p></div><span class="svc-arrow">↗</span></a>
+      <a href="#contact" class="svc-row anim fade" data-img="am-w6.jpg"><div class="svc-main"><span class="svc-num">06</span><h3>אופטימיזציה <span class="grad">למנועי AI (GEO)</span></h3><p>שהמותג שלכם יהיה המקור שמנועי הבינה כמו ChatGPT ו-Google AI מצטטים בתשובות.</p></div><span class="svc-arrow">↗</span></a>
+      <a href="#contact" class="svc-row anim fade" data-img="am-w4.jpg"><div class="svc-main"><span class="svc-num">07</span><h3>אוטומציות <span class="grad">ובוטים</span></h3><p>חיבור הכלים שלכם למערכת אחת שעובדת לבד: לידים ישר ל-CRM, מעקבים אוטומטיים ובוטים שעונים מסביב לשעון.</p></div><span class="svc-arrow">↗</span></a>
     </div>
   </div></section>
 
@@ -619,12 +620,12 @@
       <p>מאירועי יוקרה ועד טכנולוגיה. אותה שיטה, התאמה מדויקת לכל עסק.</p>
     </div>
     <div class="work-grid">
-      <a href="https://www.caesarevents.com/" target="_blank" rel="noopener" class="work-card anim fade"><div class="wc-media"><div class="wc-bar"><i></i><i></i><i></i></div><img src="am-w1.png" alt="Caesar Events" loading="lazy"></div><div class="wc-body"><div><div class="k">אירועים ויוקרה</div><h4>Caesar Events</h4><div class="res">אתר תדמית ונוכחות דיגיטלית</div></div><span class="arr">↗</span></div></a>
-      <a href="https://solpilatesil.com/" target="_blank" rel="noopener" class="work-card anim fade"><div class="wc-media"><div class="wc-bar"><i></i><i></i><i></i></div><img src="am-w2.png" alt="Sol Pilates" loading="lazy"></div><div class="wc-body"><div><div class="k">כושר וסטודיו</div><h4>Sol Pilates</h4><div class="res">אתר, מיתוג והנעה להרשמה</div></div><span class="arr">↗</span></div></a>
-      <a href="https://www.neveyarakwinery.com/" target="_blank" rel="noopener" class="work-card anim fade"><div class="wc-media"><div class="wc-bar"><i></i><i></i><i></i></div><img src="am-w3.png" alt="Neve Yarak Winery" loading="lazy"></div><div class="wc-body"><div><div class="k">מסחר ואירוח</div><h4>Neve Yarak Winery</h4><div class="res">חנות, אתר וחוויית מותג</div></div><span class="arr">↗</span></div></a>
-      <a href="https://www.ettorney.co.il/" target="_blank" rel="noopener" class="work-card anim fade"><div class="wc-media"><div class="wc-bar"><i></i><i></i><i></i></div><img src="am-w5.png" alt="Ettorney" loading="lazy"></div><div class="wc-body"><div><div class="k">משפט וטכנולוגיה</div><h4>Ettorney</h4><div class="res">פלטפורמה ונוכחות דיגיטלית</div></div><span class="arr">↗</span></div></a>
-      <a href="https://www.selectedplaces.co.il/" target="_blank" rel="noopener" class="work-card anim fade"><div class="wc-media"><div class="wc-bar"><i></i><i></i><i></i></div><img src="am-w4.png" alt="Selected Places" loading="lazy"></div><div class="wc-body"><div><div class="k">נדל\"ן ואירועים</div><h4>Selected Places</h4><div class="res">אתר תדמית ומערך פניות</div></div><span class="arr">↗</span></div></a>
-      <a href="https://yesh-collective.co.il/" target="_blank" rel="noopener" class="work-card anim fade"><div class="wc-media"><div class="wc-bar"><i></i><i></i><i></i></div><img src="am-w6.png" alt="Yesh Collective" loading="lazy"></div><div class="wc-body"><div><div class="k">ביטוח ושירות</div><h4>Yesh Collective</h4><div class="res">אתר ומערך לידים</div></div><span class="arr">↗</span></div></a>
+      <a href="https://www.caesarevents.com/" target="_blank" rel="noopener" class="work-card anim fade"><div class="wc-media"><div class="wc-bar"><i></i><i></i><i></i></div><img src="am-w1.jpg" alt="Caesar Events" loading="lazy"></div><div class="wc-body"><div><div class="k">אירועים ויוקרה</div><h4>Caesar Events</h4><div class="res">אתר תדמית ונוכחות דיגיטלית</div></div><span class="arr">↗</span></div></a>
+      <a href="https://solpilatesil.com/" target="_blank" rel="noopener" class="work-card anim fade"><div class="wc-media"><div class="wc-bar"><i></i><i></i><i></i></div><img src="am-w2.jpg" alt="Sol Pilates" loading="lazy"></div><div class="wc-body"><div><div class="k">כושר וסטודיו</div><h4>Sol Pilates</h4><div class="res">אתר, מיתוג והנעה להרשמה</div></div><span class="arr">↗</span></div></a>
+      <a href="https://www.neveyarakwinery.com/" target="_blank" rel="noopener" class="work-card anim fade"><div class="wc-media"><div class="wc-bar"><i></i><i></i><i></i></div><img src="am-w3.jpg" alt="Neve Yarak Winery" loading="lazy"></div><div class="wc-body"><div><div class="k">מסחר ואירוח</div><h4>Neve Yarak Winery</h4><div class="res">חנות, אתר וחוויית מותג</div></div><span class="arr">↗</span></div></a>
+      <a href="https://www.ettorney.co.il/" target="_blank" rel="noopener" class="work-card anim fade"><div class="wc-media"><div class="wc-bar"><i></i><i></i><i></i></div><img src="am-w5.jpg" alt="Ettorney" loading="lazy"></div><div class="wc-body"><div><div class="k">משפט וטכנולוגיה</div><h4>Ettorney</h4><div class="res">פלטפורמה ונוכחות דיגיטלית</div></div><span class="arr">↗</span></div></a>
+      <a href="https://www.selectedplaces.co.il/" target="_blank" rel="noopener" class="work-card anim fade"><div class="wc-media"><div class="wc-bar"><i></i><i></i><i></i></div><img src="am-w4.jpg" alt="Selected Places" loading="lazy"></div><div class="wc-body"><div><div class="k">נדל\"ן ואירועים</div><h4>Selected Places</h4><div class="res">אתר תדמית ומערך פניות</div></div><span class="arr">↗</span></div></a>
+      <a href="https://yesh-collective.co.il/" target="_blank" rel="noopener" class="work-card anim fade"><div class="wc-media"><div class="wc-bar"><i></i><i></i><i></i></div><img src="am-w6.jpg" alt="Yesh Collective" loading="lazy"></div><div class="wc-body"><div><div class="k">ביטוח ושירות</div><h4>Yesh Collective</h4><div class="res">אתר ומערך לידים</div></div><span class="arr">↗</span></div></a>
     </div>
     <p class="work-note">פרויקטים אמיתיים מלקוחות הסטודיו. לחיצה פותחת את האתר החי.</p>
   </div></section>
@@ -672,7 +673,7 @@
       <div class="magix-visual anim fade">
         <div class="mx-browser">
           <div class="mx-bar"><i></i><i></i><i></i></div>
-          <img class="mx-shot" src="am-w3.png" alt="דוגמה לאתר שבונים בסטודיו MAGIX" loading="lazy">
+          <img class="mx-shot" src="am-w3.jpg" alt="דוגמה לאתר שבונים בסטודיו MAGIX" loading="lazy">
         </div>
         <div class="mx-badge"><b>₪0 להתחיל</b><span>רואים דמו אמיתי, ואז מחליטים</span></div>
       </div>
@@ -842,9 +843,9 @@
     <div class="foot-bottom"><span>AM Marketing · סטודיו דיגיטל</span><span>© 2026 · כל הזכויות שמורות</span></div>
   </div></footer>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
 <script>
   /* WATCHDOG — the page must always open, even if CDN scripts (GSAP/Lenis) fail or are blocked.
      Removes the preloader and force-reveals content if anything is still hidden. */
@@ -925,7 +926,7 @@
     }catch(e){}
   })();
 
-  (function(){
+  document.addEventListener('DOMContentLoaded',function(){
     var ok = window.gsap && window.ScrollTrigger;
     if(!ok){ addEventListener('scroll',function(){onScroll(scrollY);}); setCounts(); return; }
     gsap.registerPlugin(ScrollTrigger);
@@ -939,7 +940,7 @@
     } else { addEventListener('scroll',function(){onScroll(scrollY);}); }
 
     gsap.to('.hero .anim',{opacity:1,y:0,duration:1,ease:'power3.out',stagger:.09,delay:.15});
-    gsap.fromTo('.hero h1 .ln>span',{yPercent:112},{yPercent:0,duration:1.05,ease:'power4.out',stagger:.13,delay:.18});
+    /* h1 line-slide removed so the heading paints immediately (LCP) */
     gsap.utils.toArray('.anim').forEach(function(el){ if(el.closest('.hero'))return;
       gsap.to(el,{opacity:1,y:0,duration:.9,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 88%',once:true}}); });
 
@@ -977,7 +978,7 @@
     if(fprog){gsap.to(fprog,{scaleY:1,ease:'none',scrollTrigger:{trigger:'.formula-list',start:'top 72%',end:'bottom 70%',scrub:.5}});}
     setTimeout(function(){document.querySelectorAll('.anim').forEach(function(el){if(parseFloat(getComputedStyle(el).opacity)<.05){el.style.opacity='1';el.style.transform='none';}});},2600);
     ScrollTrigger.refresh();
-  })();
+  });
 </script>
 </body>
 </html>
