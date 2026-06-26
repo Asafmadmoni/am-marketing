@@ -40,7 +40,7 @@
     --cream:#ece6dc; --ink:#15131a;
     --grad:linear-gradient(108deg,#a855f7 0%,#ff2d7e 100%);
     --magenta:#ff2d7e; --purple:#b06bff;
-    --text:#ece6dc; --muted:#9a938a; --dim:#665f57;
+    --text:#ece6dc; --muted:#9a938a; --dim:#928a7e;
     --line:rgba(240,230,220,.10); --line-2:rgba(240,230,220,.06);
     --font:'Noto Sans Hebrew','Heebo',-apple-system,'Segoe UI',sans-serif;
     --ease:cubic-bezier(.22,.61,.27,1);
@@ -215,7 +215,7 @@
   .pcard{background:var(--bg);padding:34px 26px 38px;transition:background .35s}
   .pcard:hover{background:var(--bg-2)}
   .pcard .pi-n{font-weight:800;font-size:14px;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;font-variant-numeric:tabular-nums}
-  .pcard h4{font-weight:700;font-size:17px;margin:22px 0 10px;letter-spacing:-.02em;line-height:1.25}
+  .pcard h3{font-weight:700;font-size:17px;margin:22px 0 10px;letter-spacing:-.02em;line-height:1.25}
   .pcard p{color:var(--muted);font-size:14px;font-weight:300;line-height:1.55}
   @media(max-width:980px){.perf-cards{grid-template-columns:1fr 1fr}}
   @media(max-width:600px){.perf-cards{grid-template-columns:1fr}}
@@ -331,7 +331,7 @@
   .work-card:hover .wc-media img{transform:translateY(-18%)}
   .wc-body{padding:24px 24px 26px;display:flex;align-items:flex-end;justify-content:space-between;gap:14px}
   .wc-body .k{font-weight:600;font-size:11.5px;letter-spacing:.13em;color:var(--purple)}
-  .wc-body h4{font-weight:700;font-size:19px;margin-top:10px;letter-spacing:-.02em}
+  .wc-body h3{font-weight:700;font-size:19px;margin-top:10px;letter-spacing:-.02em}
   .wc-body .res{color:var(--dim);font-size:14px;margin-top:6px}
   .wc-body .arr{font-size:20px;color:var(--dim);transition:transform .35s var(--ease),color .3s}
   .work-card:hover .wc-body .arr{color:var(--magenta);transform:translateX(-5px)}
@@ -427,7 +427,7 @@
   .foot .brand{margin-bottom:18px}
   .foot .desc{color:var(--muted);max-width:280px;font-weight:300;font-size:15px}
   .foot-cols{display:flex;gap:68px;flex-wrap:wrap}
-  .foot-cols h5{font-weight:700;font-size:11px;letter-spacing:.16em;color:var(--dim);margin-bottom:18px}
+  .foot-cols h3{font-weight:700;font-size:11px;letter-spacing:.16em;color:var(--dim);margin-bottom:18px}
   .foot-cols a{display:block;color:var(--muted);padding:7px 0;font-size:14.5px;transition:color .2s}
   .foot-cols a:hover{color:var(--text)}
   .foot-bottom{margin-top:56px;padding-top:28px;border-top:1px solid var(--line);display:flex;justify-content:space-between;color:var(--dim);font-size:13px;flex-wrap:wrap;gap:10px}
@@ -468,6 +468,7 @@
       <a href="#contact" class="nav-cta">בואו נדבר <span class="ar">←</span></a>
     </nav></div>
   </header>
+  <main>
 
   <!-- HERO -->
   <section class="hero" id="top">
@@ -620,12 +621,12 @@
       <p>מאירועי יוקרה ועד טכנולוגיה. אותה שיטה, התאמה מדויקת לכל עסק.</p>
     </div>
     <div class="work-grid">
-      <a href="https://www.caesarevents.com/" target="_blank" rel="noopener" class="work-card anim fade"><div class="wc-media"><div class="wc-bar"><i></i><i></i><i></i></div><img src="am-w1.jpg" alt="Caesar Events" loading="lazy"></div><div class="wc-body"><div><div class="k">אירועים ויוקרה</div><h4>Caesar Events</h4><div class="res">אתר תדמית ונוכחות דיגיטלית</div></div><span class="arr">↗</span></div></a>
-      <a href="https://solpilatesil.com/" target="_blank" rel="noopener" class="work-card anim fade"><div class="wc-media"><div class="wc-bar"><i></i><i></i><i></i></div><img src="am-w2.jpg" alt="Sol Pilates" loading="lazy"></div><div class="wc-body"><div><div class="k">כושר וסטודיו</div><h4>Sol Pilates</h4><div class="res">אתר, מיתוג והנעה להרשמה</div></div><span class="arr">↗</span></div></a>
-      <a href="https://www.neveyarakwinery.com/" target="_blank" rel="noopener" class="work-card anim fade"><div class="wc-media"><div class="wc-bar"><i></i><i></i><i></i></div><img src="am-w3.jpg" alt="Neve Yarak Winery" loading="lazy"></div><div class="wc-body"><div><div class="k">מסחר ואירוח</div><h4>Neve Yarak Winery</h4><div class="res">חנות, אתר וחוויית מותג</div></div><span class="arr">↗</span></div></a>
-      <a href="https://www.ettorney.co.il/" target="_blank" rel="noopener" class="work-card anim fade"><div class="wc-media"><div class="wc-bar"><i></i><i></i><i></i></div><img src="am-w5.jpg" alt="Ettorney" loading="lazy"></div><div class="wc-body"><div><div class="k">משפט וטכנולוגיה</div><h4>Ettorney</h4><div class="res">פלטפורמה ונוכחות דיגיטלית</div></div><span class="arr">↗</span></div></a>
-      <a href="https://www.selectedplaces.co.il/" target="_blank" rel="noopener" class="work-card anim fade"><div class="wc-media"><div class="wc-bar"><i></i><i></i><i></i></div><img src="am-w4.jpg" alt="Selected Places" loading="lazy"></div><div class="wc-body"><div><div class="k">נדל\"ן ואירועים</div><h4>Selected Places</h4><div class="res">אתר תדמית ומערך פניות</div></div><span class="arr">↗</span></div></a>
-      <a href="https://yesh-collective.co.il/" target="_blank" rel="noopener" class="work-card anim fade"><div class="wc-media"><div class="wc-bar"><i></i><i></i><i></i></div><img src="am-w6.jpg" alt="Yesh Collective" loading="lazy"></div><div class="wc-body"><div><div class="k">ביטוח ושירות</div><h4>Yesh Collective</h4><div class="res">אתר ומערך לידים</div></div><span class="arr">↗</span></div></a>
+      <a href="https://www.caesarevents.com/" target="_blank" rel="noopener" class="work-card anim fade"><div class="wc-media"><div class="wc-bar"><i></i><i></i><i></i></div><img src="am-w1.jpg" alt="Caesar Events" loading="lazy"></div><div class="wc-body"><div><div class="k">אירועים ויוקרה</div><h3>Caesar Events</h3><div class="res">אתר תדמית ונוכחות דיגיטלית</div></div><span class="arr">↗</span></div></a>
+      <a href="https://solpilatesil.com/" target="_blank" rel="noopener" class="work-card anim fade"><div class="wc-media"><div class="wc-bar"><i></i><i></i><i></i></div><img src="am-w2.jpg" alt="Sol Pilates" loading="lazy"></div><div class="wc-body"><div><div class="k">כושר וסטודיו</div><h3>Sol Pilates</h3><div class="res">אתר, מיתוג והנעה להרשמה</div></div><span class="arr">↗</span></div></a>
+      <a href="https://www.neveyarakwinery.com/" target="_blank" rel="noopener" class="work-card anim fade"><div class="wc-media"><div class="wc-bar"><i></i><i></i><i></i></div><img src="am-w3.jpg" alt="Neve Yarak Winery" loading="lazy"></div><div class="wc-body"><div><div class="k">מסחר ואירוח</div><h3>Neve Yarak Winery</h3><div class="res">חנות, אתר וחוויית מותג</div></div><span class="arr">↗</span></div></a>
+      <a href="https://www.ettorney.co.il/" target="_blank" rel="noopener" class="work-card anim fade"><div class="wc-media"><div class="wc-bar"><i></i><i></i><i></i></div><img src="am-w5.jpg" alt="Ettorney" loading="lazy"></div><div class="wc-body"><div><div class="k">משפט וטכנולוגיה</div><h3>Ettorney</h3><div class="res">פלטפורמה ונוכחות דיגיטלית</div></div><span class="arr">↗</span></div></a>
+      <a href="https://www.selectedplaces.co.il/" target="_blank" rel="noopener" class="work-card anim fade"><div class="wc-media"><div class="wc-bar"><i></i><i></i><i></i></div><img src="am-w4.jpg" alt="Selected Places" loading="lazy"></div><div class="wc-body"><div><div class="k">נדל\"ן ואירועים</div><h3>Selected Places</h3><div class="res">אתר תדמית ומערך פניות</div></div><span class="arr">↗</span></div></a>
+      <a href="https://yesh-collective.co.il/" target="_blank" rel="noopener" class="work-card anim fade"><div class="wc-media"><div class="wc-bar"><i></i><i></i><i></i></div><img src="am-w6.jpg" alt="Yesh Collective" loading="lazy"></div><div class="wc-body"><div><div class="k">ביטוח ושירות</div><h3>Yesh Collective</h3><div class="res">אתר ומערך לידים</div></div><span class="arr">↗</span></div></a>
     </div>
     <p class="work-note">פרויקטים אמיתיים מלקוחות הסטודיו. לחיצה פותחת את האתר החי.</p>
   </div></section>
@@ -717,11 +718,11 @@
       </div>
     </div>
     <div class="perf-cards">
-      <div class="pcard anim fade"><div class="pi-n">01</div><h4>דפי נחיתה ממירים</h4><p>נבנים למטרה אחת: להפוך קליק לליד.</p></div>
-      <div class="pcard anim fade"><div class="pi-n">02</div><h4>טראקינג מדויק</h4><p>מודדים כל ליד, ויודעים בדיוק מאיפה הגיע.</p></div>
-      <div class="pcard anim fade"><div class="pi-n">03</div><h4>מחקר מילות מפתח</h4><p>מכוונים לכוונת קנייה, לא לתנועה ריקה.</p></div>
-      <div class="pcard anim fade"><div class="pi-n">04</div><h4>אסטרטגיית קמפיין</h4><p>מבנה חשבון נכון שמוריד את העלות לליד.</p></div>
-      <div class="pcard anim fade"><div class="pi-n">05</div><h4>ניהול ואופטימיזציה</h4><p>יד על הדופק ושיפור מתמיד של התוצאות.</p></div>
+      <div class="pcard anim fade"><div class="pi-n">01</div><h3>דפי נחיתה ממירים</h3><p>נבנים למטרה אחת: להפוך קליק לליד.</p></div>
+      <div class="pcard anim fade"><div class="pi-n">02</div><h3>טראקינג מדויק</h3><p>מודדים כל ליד, ויודעים בדיוק מאיפה הגיע.</p></div>
+      <div class="pcard anim fade"><div class="pi-n">03</div><h3>מחקר מילות מפתח</h3><p>מכוונים לכוונת קנייה, לא לתנועה ריקה.</p></div>
+      <div class="pcard anim fade"><div class="pi-n">04</div><h3>אסטרטגיית קמפיין</h3><p>מבנה חשבון נכון שמוריד את העלות לליד.</p></div>
+      <div class="pcard anim fade"><div class="pi-n">05</div><h3>ניהול ואופטימיזציה</h3><p>יד על הדופק ושיפור מתמיד של התוצאות.</p></div>
     </div>
   </div></section>
 
@@ -828,6 +829,7 @@
     </div>
   </div></div></section>
 
+  </main>
   <footer><div class="wrap">
     <div class="foot">
       <div>
@@ -835,9 +837,9 @@
         <p class="desc">סטודיו דיגיטל שבונה לעסקים מותג, אתר וקמפיינים שמביאים תוצאות.</p>
       </div>
       <div class="foot-cols">
-        <div><h5>שירותים</h5><a href="google-ads.html">קידום ולידים בגוגל</a><a href="#services">בניית אתרים</a><a href="#services">מיתוג ולוגו</a><a href="#services">אסטרטגיה</a></div>
-        <div><h5>תוכן</h5><a href="blog.html">בלוג</a><a href="#work">עבודות</a><a href="#faq">שאלות נפוצות</a></div>
-        <div><h5>מידע</h5><a href="#contact">צרו קשר</a><a href="accessibility.html">הצהרת נגישות</a><a href="privacy.html">מדיניות פרטיות</a></div>
+        <div><h3>שירותים</h3><a href="google-ads.html">קידום ולידים בגוגל</a><a href="#services">בניית אתרים</a><a href="#services">מיתוג ולוגו</a><a href="#services">אסטרטגיה</a></div>
+        <div><h3>תוכן</h3><a href="blog.html">בלוג</a><a href="#work">עבודות</a><a href="#faq">שאלות נפוצות</a></div>
+        <div><h3>מידע</h3><a href="#contact">צרו קשר</a><a href="accessibility.html">הצהרת נגישות</a><a href="privacy.html">מדיניות פרטיות</a></div>
       </div>
     </div>
     <div class="foot-bottom"><span>AM Marketing · סטודיו דיגיטל</span><span>© 2026 · כל הזכויות שמורות</span></div>
