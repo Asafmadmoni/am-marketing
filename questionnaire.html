@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>שאלון אפיון · מיתוג ואתר תדמית | AM Marketing</title>
+<link rel="canonical" href="https://am-marketing.solutions/questionnaire.html">
+<meta name="robots" content="noindex,follow">
+<meta name="description" content="שאלון אפיון קצר של AM Marketing לפני שמתחילים לבנות מותג ואתר תדמית. כמה דקות, והכל במקום אחד.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AM Marketing">
+<meta property="og:title" content="שאלון אפיון · מיתוג ואתר תדמית | AM Marketing">
+<meta property="og:description" content="לפני שצוללים פנימה, הכנו שאלון אפיון קצר. כמה דקות, והכל במקום אחד.">
+<meta property="og:url" content="https://am-marketing.solutions/questionnaire.html">
+<meta property="og:locale" content="he_IL">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;800&family=Noto+Sans+Hebrew:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#4a2399;
+    --navy-deep:#1b0f33;
+    --ink:#241a36;
+    --ink-soft:#5b5270;
+    --muted:#9890a8;
+    --slate:#cabfe0;
+    --slate-dim:#a194be;
+    --paper:#faf8fc;
+    --cream:#f5effb;
+    --card:#ffffff;
+    --line:#e9e3f2;
+    --line-soft:#f1ecf8;
+    --brass:#cf2b7d;
+    --brass-bright:#e95fa3;
+    --brass-tint:rgba(207,43,125,.10);
+    --sans:'Noto Sans Hebrew','Noto Sans',-apple-system,'Segoe UI',sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--ink);
+    font-family:var(--sans);font-weight:400;font-size:17px;line-height:1.75;-webkit-font-smoothing:antialiased}
+
+  /* ===== HERO ===== */
+  .hero{background:var(--navy-deep);color:var(--cream)}
+  .hero-inner{max-width:820px;margin:0 auto;padding:52px 28px 48px}
+  .hero-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:60px;flex-wrap:wrap;gap:14px}
+  .lockup{display:flex;align-items:center;gap:15px}
+  .brand-logo{width:52px;height:52px;object-fit:contain;background:#fff;border-radius:12px;padding:5px;flex:none}
+  .brand-logo-footer{width:56px;height:56px;object-fit:contain;background:#fff;border-radius:12px;padding:6px;display:block;margin:0 auto 12px}
+  .lockup .mono{width:56px;color:var(--cream);flex:none}
+  .wordmark{font-weight:800;font-size:19px;letter-spacing:1.5px;line-height:1;color:var(--cream)}
+  .wordmark small{display:block;font-weight:600;font-size:9px;letter-spacing:3.5px;color:var(--brass-bright);margin-top:6px}
+  .pill-out{font-size:13px;font-weight:600;color:var(--slate);border:1px solid rgba(255,255,255,.22);border-radius:100px;padding:8px 16px;white-space:nowrap}
+  .eyebrow{font-size:12.5px;font-weight:800;letter-spacing:4px;color:var(--brass-bright);margin:0 0 18px}
+  .hero h1{font-weight:800;font-size:46px;line-height:1.14;letter-spacing:-.6px;margin:0 0 20px;color:#fff}
+  .hero .lead{font-weight:400;font-size:19px;line-height:1.6;color:var(--slate);max-width:620px;margin:0 0 28px}
+  .hero-rule{height:3px;width:66px;background:linear-gradient(90deg,#6a2c9c,#d6266f);border-radius:2px;margin:0 0 18px}
+  .hero .hint{font-size:14px;color:var(--slate-dim);margin:0}
+
+  /* ===== BODY ===== */
+  .page{max-width:820px;margin:0 auto;padding:18px 28px 96px}
+  .section{padding:46px 0;border-bottom:1px solid var(--line-soft)}
+  .section:last-of-type{border-bottom:none}
+  .shead{display:flex;align-items:baseline;gap:13px;margin-bottom:9px}
+  .snum{font-weight:800;font-size:15px;color:var(--brass);letter-spacing:.5px;flex:none}
+  .section h2{font-weight:800;font-size:25px;line-height:1.25;letter-spacing:-.3px;margin:0;color:var(--ink)}
+  .sub{font-weight:400;font-size:15.5px;color:var(--ink-soft);margin:6px 0 26px;max-width:660px}
+
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px 22px}
+  .field{display:flex;flex-direction:column;gap:8px;margin-bottom:18px}
+  .field.full{grid-column:1 / -1}
+  label{font-size:15px;font-weight:600;color:var(--ink)}
+  .req{color:var(--brass);font-weight:800}
+  .help{font-size:13.5px;color:var(--muted);font-weight:400}
+  input[type=text],input[type=tel],input[type=email],input[type=url],textarea,select{
+    font-family:var(--sans);font-size:16px;font-weight:400;color:var(--ink);background:var(--card);
+    border:1px solid var(--line);border-radius:10px;padding:13px 15px;width:100%;
+    transition:border-color .15s,box-shadow .15s;outline:none}
+  input::placeholder,textarea::placeholder{color:#c4bdb0}
+  input:focus,textarea:focus,select:focus{border-color:var(--brass);box-shadow:0 0 0 3px var(--brass-tint)}
+  textarea{resize:vertical;min-height:106px;line-height:1.65}
+  input[type=file]{font-family:var(--sans);font-size:14px;color:var(--ink-soft);background:var(--card);border:1px dashed var(--line);border-radius:10px;padding:13px 14px;width:100%;cursor:pointer}
+  input[type=file]:hover{border-color:var(--brass)}
+  input[type=file]::file-selector-button{font-family:var(--sans);font-weight:600;font-size:13px;color:#fff;background:var(--navy);border:none;border-radius:8px;padding:8px 14px;margin-inline-end:12px;cursor:pointer}
+
+  .chips{display:flex;flex-wrap:wrap;gap:9px}
+  .chip{display:inline-flex;align-items:center;gap:7px;cursor:pointer;user-select:none;
+    background:var(--card);border:1px solid var(--line);border-radius:100px;
+    padding:9px 16px;font-size:14.5px;font-weight:600;color:var(--ink-soft);transition:all .15s}
+  .chip:hover{border-color:var(--brass);color:var(--ink)}
+  .chip input{position:absolute;opacity:0;width:0;height:0}
+  .chip:has(input:checked){background:var(--navy);border-color:var(--navy);color:#fff}
+  .chip:has(input:checked)::before{content:"\2713";color:var(--brass-bright);font-weight:800}
+
+  .actions{margin-top:50px;display:flex;gap:13px;align-items:center;flex-wrap:wrap}
+  .btn{font-family:var(--sans);font-weight:700;font-size:16px;cursor:pointer;border-radius:10px;
+    padding:15px 30px;border:1px solid var(--navy);background:var(--navy);color:#fff;transition:all .15s}
+  .btn:hover{background:#341a6b}
+  .btn:disabled{opacity:.6;cursor:default}
+  .btn.ghost{background:transparent;color:var(--navy);border-color:var(--line)}
+  .btn.ghost:hover{background:var(--brass-tint);border-color:var(--brass);color:var(--navy)}
+  .actions .note{font-size:13.5px;color:var(--muted)}
+  .floating{position:fixed;bottom:24px;left:24px;z-index:50;padding:13px 22px;
+    box-shadow:0 12px 30px rgba(11,19,34,.28)}
+
+  /* ===== THANK YOU ===== */
+  .thanks{display:none;text-align:center;padding:64px 20px 36px}
+  .thanks .badge{width:66px;height:66px;border-radius:50%;background:var(--brass-tint);color:var(--brass);
+    display:flex;align-items:center;justify-content:center;font-size:32px;font-weight:800;margin:0 auto 22px}
+  .thanks h2{font-weight:800;font-size:30px;letter-spacing:-.3px;margin:0 0 12px;color:var(--ink)}
+  .thanks p{font-weight:400;font-size:17px;color:var(--ink-soft);max-width:480px;margin:0 auto 26px}
+
+  /* ===== FOOTER ===== */
+  .footer{background:var(--navy-deep);color:var(--cream);text-align:center;padding:48px 28px;position:relative}
+  .footer::before{content:"";position:absolute;top:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,#6a2c9c,#d6266f)}
+  .footer .mono{width:42px;color:var(--brass-bright);margin:0 auto 16px;display:block}
+  .footer .fw{font-weight:800;font-size:17px;letter-spacing:3px}
+  .footer .ft{font-weight:400;font-size:13px;color:var(--slate-dim);letter-spacing:.5px;margin-top:8px}
+
+  /* ===== PART DIVIDER ===== */
+  .part-divider{background:var(--navy-deep);color:var(--cream);border-radius:14px;padding:42px 36px;margin:40px 0 8px;text-align:center}
+  .part-eyebrow{display:inline-block;font-weight:800;font-size:12px;letter-spacing:4px;color:var(--brass-bright);margin-bottom:12px}
+  .part-title{font-weight:800;font-size:30px;letter-spacing:-.3px;margin:0 0 12px;color:#fff}
+  .part-lead{font-weight:400;font-size:16px;line-height:1.6;color:var(--slate);max-width:540px;margin:0 auto}
+
+  @media (max-width:640px){
+    .grid{grid-template-columns:1fr}
+    .hero h1{font-size:33px}.hero .lead{font-size:17px}.hero-top{margin-bottom:42px}
+    .section h2{font-size:22px}.floating{left:14px;bottom:14px}
+  }
+  @media print{
+    .no-print{display:none!important}
+    body{background:#fff;font-size:13px}
+    .hero{background:#fff!important;color:var(--ink)!important;border-bottom:2px solid var(--brass)}
+    .hero-inner{padding:18px 8px}.hero-top{margin-bottom:24px}
+    .hero h1{color:var(--ink)!important;font-size:28px}.hero .lead{color:var(--ink-soft)!important}
+    .lockup .mono,.wordmark{color:var(--ink)!important}.eyebrow{color:var(--brass)!important}
+    .hero .hint,.pill-out{color:var(--muted)!important}.pill-out{border-color:var(--line)!important}
+    .page{padding:0 8px}.section{padding:18px 0;break-inside:avoid}
+    input,textarea,select,.chip{background:#fff}
+    .footer{background:#fff;color:var(--ink);border-top:1px solid var(--line)}
+    .footer .mono{color:var(--brass)}.footer .ft{color:var(--muted)}
+    .part-divider{background:#fff!important;color:var(--ink)!important;border:1px solid var(--brass);break-inside:avoid}
+    .part-title{color:var(--ink)!important}.part-lead{color:var(--ink-soft)!important}.part-eyebrow{color:var(--brass)!important}
+  }
+</style>
+</head>
+<body>
+
+  <!-- ===== HERO ===== -->
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="hero-top">
+        <div class="lockup">
+          <img class="brand-logo" src="am-logo.png" alt="AM Marketing">
+          <div class="wordmark">AM MARKETING<small>DIGITAL GROWTH</small></div>
+        </div>
+        <span class="pill-out">כ-15 דקות למילוי</span>
+      </div>
+      <p class="eyebrow">שאלון אפיון · מיתוג ואתר תדמית</p>
+      <h1>בונים לכם אתר תדמית<br>שמשדר מקצועיות, אמון ויוקרה.</h1>
+      <p class="lead">כמה שאלות על העסק, על הסגנון ועל הלקוחות שלכם. ככל שתפרטו, כך הלוגו והאתר יצאו מדויקים יותר, ונגיע לתוצאה הנכונה מהר יותר.</p>
+      <div class="hero-rule"></div>
+      <p class="hint">מלאו ישירות כאן ושלחו בלחיצה. התשובות מגיעות ישר אלינו.</p>
+    </div>
+  </header>
+
+  <div class="page">
+   <form id="qform" action="https://formsubmit.co/asafmadmoni1@gmail.com" method="POST" enctype="multipart/form-data">
+    <!-- FormSubmit wiring: submissions emailed to asafmadmoni1@gmail.com (one-time activation) -->
+    <input type="hidden" name="_subject" value="פנייה חדשה משאלון האפיון, AM Marketing">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="https://am-marketing.solutions/?sent=1">
+    <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+    <!-- 1 -->
+    <section class="section">
+      <div class="shead"><span class="snum">01</span><h2>פרטי קשר</h2></div>
+      <p class="sub">הבסיס, כדי שנדע לאן יעברו הפניות שלכם.</p>
+      <div class="grid">
+        <div class="field"><label>שם המשרד / החברה <span class="req">*</span></label><input type="text" name="company" required></div>
+        <div class="field"><label>איש קשר</label><input type="text" name="contact_name"></div>
+        <div class="field"><label>טלפון <span class="req">*</span></label><input type="tel" name="phone" required></div>
+        <div class="field"><label>וואטסאפ <span class="help">(אם שונה)</span></label><input type="tel" name="whatsapp"></div>
+        <div class="field"><label>מייל לקבלת לידים</label><input type="email" name="email"></div>
+        <div class="field"><label>אתר נוכחי <span class="help">(אם יש)</span></label><input type="url" name="current_site"></div>
+        <div class="field"><label>מספר רישיון תיווך / ח.פ</label><input type="text" name="license"></div>
+        <div class="field"><label>כתובת / אזור המשרד</label><input type="text" name="address"></div>
+      </div>
+    </section>
+
+    <!-- 2 -->
+    <section class="section">
+      <div class="shead"><span class="snum">02</span><h2>איזה סוג עסק אתם?</h2></div>
+      <p class="sub">זה משנה הכל, מבנה האתר, השפה והפיצ'רים נבנים אחרת לכל סוג. סמנו את מה שמתאים.</p>
+      <div class="chips">
+        <label class="chip"><input type="checkbox" name="biz_type" value="תיווך מגורים">תיווך מגורים</label>
+        <label class="chip"><input type="checkbox" name="biz_type" value="יזמות / קבלן">יזמות / קבלן (פרויקטים חדשים)</label>
+        <label class="chip"><input type="checkbox" name="biz_type" value="נדל&quot;ן מסחרי">נדל"ן מסחרי</label>
+        <label class="chip"><input type="checkbox" name="biz_type" value="ניהול נכסים">ניהול נכסים</label>
+        <label class="chip"><input type="checkbox" name="biz_type" value="השקעות נדל&quot;ן">השקעות נדל"ן</label>
+        <label class="chip"><input type="checkbox" name="biz_type" value="נדל&quot;ן יוקרה">נדל"ן יוקרה</label>
+        <label class="chip"><input type="checkbox" name="biz_type" value="נדל&quot;ן בחו&quot;ל">נדל"ן בחו"ל</label>
+        <label class="chip"><input type="checkbox" name="biz_type" value="אחר">אחר</label>
+      </div>
+      <div class="field full" style="margin-top:20px"><label>במשפט אחד, מה הליבה שלכם?</label><input type="text" name="biz_core"></div>
+    </section>
+
+    <!-- 3 -->
+    <section class="section">
+      <div class="shead"><span class="snum">03</span><h2>קצת עליכם</h2></div>
+      <p class="sub">מי אתם ולמה אתם קמים בבוקר. הסיפור הזה הופך לדף "אודות" שמייצר אמון.</p>
+      <div class="field full"><label>ספרו על המשרד / החברה</label><textarea name="about"></textarea></div>
+      <div class="grid">
+        <div class="field"><label>כמה שנים אתם בשוק?</label><input type="text" name="years"></div>
+        <div class="field"><label>כמה עסקאות / פרויקטים סגרתם (בערך)?</label><input type="text" name="deals"></div>
+      </div>
+    </section>
+
+    <!-- 4 -->
+    <section class="section">
+      <div class="shead"><span class="snum">04</span><h2>למה דווקא אתכם?</h2></div>
+      <p class="sub">בנדל"ן הכל אמון. למה לקוח יבחר בכם ולא במתווך/יזם שמעבר לכביש?</p>
+      <div class="field full"><label>במשפט אחד, היתרון הגדול שלכם</label><input type="text" name="usp"></div>
+      <div class="field full"><label>3 דברים שאתם הכי טובים בהם</label><textarea name="top3" placeholder="1.&#10;2.&#10;3."></textarea></div>
+      <div class="field full"><label>אותות אמון <span class="help">(ותק, פרסים, הסמכות, אזורי התמחות, אחוז עסקאות מוצלחות)</span></label><textarea name="trust"></textarea></div>
+    </section>
+
+    <!-- 5 -->
+    <section class="section">
+      <div class="shead"><span class="snum">05</span><h2>איפה אתם פועלים?</h2></div>
+      <p class="sub">קריטי לקידום בגוגל. ככל שתהיו ספציפיים (שכונה ולא רק עיר), כך נופיע למי שמחפש בדיוק את האזור שלכם.</p>
+      <div class="field full"><label>ערים ושכונות הפעילות</label><textarea name="areas" placeholder="לדוגמה: רמת אביב, תל ברוך, צהלה, אפקה..."></textarea></div>
+      <div class="field full"><label>יש שכונה אחת שאתם "המלכים" שלה?</label><input type="text" name="farm_area"></div>
+    </section>
+
+    <!-- 6 -->
+    <section class="section">
+      <div class="shead"><span class="snum">06</span><h2>השירותים שלכם</h2></div>
+      <p class="sub">ככל שתפרטו פה יותר, כך עמודי השירות באתר יהיו חזקים ומשכנעים יותר.</p>
+      <label style="display:block;margin-bottom:11px">למי אתם נותנים שירות?</label>
+      <div class="chips" style="margin-bottom:24px">
+        <label class="chip"><input type="checkbox" name="audience" value="מוכרים">מוכרים</label>
+        <label class="chip"><input type="checkbox" name="audience" value="קונים">קונים</label>
+        <label class="chip"><input type="checkbox" name="audience" value="משכירים">משכירים</label>
+        <label class="chip"><input type="checkbox" name="audience" value="שוכרים">שוכרים</label>
+        <label class="chip"><input type="checkbox" name="audience" value="משקיעים">משקיעים</label>
+      </div>
+      <label style="display:block;margin-bottom:11px">סוגי נכסים</label>
+      <div class="chips" style="margin-bottom:24px">
+        <label class="chip"><input type="checkbox" name="prop_type" value="דירות">דירות</label>
+        <label class="chip"><input type="checkbox" name="prop_type" value="פנטהאוזים">פנטהאוזים</label>
+        <label class="chip"><input type="checkbox" name="prop_type" value="וילות / בתים פרטיים">וילות / בתים פרטיים</label>
+        <label class="chip"><input type="checkbox" name="prop_type" value="מסחרי">מסחרי</label>
+        <label class="chip"><input type="checkbox" name="prop_type" value="קרקעות">קרקעות</label>
+        <label class="chip"><input type="checkbox" name="prop_type" value="פרויקטים חדשים">פרויקטים חדשים</label>
+        <label class="chip"><input type="checkbox" name="prop_type" value="נכסים מניבים">נכסים מניבים</label>
+      </div>
+      <div class="field full"><label>פרטו על כל שירות עיקרי <span class="help">(הערכת שווי, ליווי משכנתא, ניהול נכס, שיווק פרויקט, ייעוץ השקעות...)</span></label><textarea name="services"></textarea></div>
+    </section>
+
+    <!-- 7 -->
+    <section class="section">
+      <div class="shead"><span class="snum">07</span><h2>הנכסים / המלאי</h2></div>
+      <p class="sub">הדרך להציג את הנכסים והפרויקטים שלכם בצורה שמכבדת אתכם. כך נדע אם לבנות גלריית נכסים, מפה ועמודי נכס.</p>
+      <div class="grid">
+        <div class="field"><label>יש לכם נכסים פעילים להציג? כמה בערך?</label><input type="text" name="inventory_count"></div>
+        <div class="field"><label>צריך חיפוש וסינון נכסים?</label>
+          <select name="need_search"><option value="">בחרו...</option><option>כן</option><option>לא</option><option>לא בטוח</option></select></div>
+      </div>
+      <label style="display:block;margin:6px 0 11px">מאיפה מגיע המלאי?</label>
+      <div class="chips" style="margin-bottom:24px">
+        <label class="chip"><input type="checkbox" name="feed" value="יד2">יד2</label>
+        <label class="chip"><input type="checkbox" name="feed" value="מדלן">מדלן</label>
+        <label class="chip"><input type="checkbox" name="feed" value="CRM משלנו">CRM משלנו</label>
+        <label class="chip"><input type="checkbox" name="feed" value="ניהול ידני">ניהול ידני</label>
+        <label class="chip"><input type="checkbox" name="feed" value="אין עדיין">אין עדיין</label>
+      </div>
+      <div class="field full"><label>ליזמים בלבד <span class="help">(עמוד פרויקט ייעודי? תוכניות דירה? הדמיות? סטטוס בנייה?)</span></label><textarea name="developer_needs"></textarea></div>
+    </section>
+
+    <!-- 8 -->
+    <section class="section">
+      <div class="shead"><span class="snum">08</span><h2>חומרים ויזואליים</h2></div>
+      <p class="sub">בנדל"ן קונים בעיניים. מה כבר יש לכם ביד? (ומה שאין, נדע להשלים יחד.)</p>
+      <div class="chips">
+        <label class="chip"><input type="checkbox" name="assets" value="צילומי נכסים מקצועיים">צילומי נכסים מקצועיים</label>
+        <label class="chip"><input type="checkbox" name="assets" value="סרטוני וידאו">סרטוני וידאו</label>
+        <label class="chip"><input type="checkbox" name="assets" value="צילומי רחפן">צילומי רחפן</label>
+        <label class="chip"><input type="checkbox" name="assets" value="סיורים וירטואליים 3D">סיורים וירטואליים 3D</label>
+        <label class="chip"><input type="checkbox" name="assets" value="הדמיות">הדמיות</label>
+        <label class="chip"><input type="checkbox" name="assets" value="תוכניות אדריכליות">תוכניות אדריכליות</label>
+        <label class="chip"><input type="checkbox" name="assets" value="לוגו ומיתוג">לוגו ומיתוג</label>
+        <label class="chip"><input type="checkbox" name="assets" value="אין עדיין">אין עדיין</label>
+      </div>
+      <div class="field full" style="margin-top:24px"><label>רוצים להעלות חלק מהחומרים כבר עכשיו? <span class="help">(תמונות נכסים ופרויקטים, הדמיות. אפשר כמה קבצים. לכמות גדולה השאירו לינק בשדה שבסוף הטופס)</span></label><input type="file" name="property_photos" accept="image/*,.pdf,.zip" multiple></div>
+    </section>
+
+    <!-- 9 -->
+    <section class="section">
+      <div class="shead"><span class="snum">09</span><h2>קהל היעד</h2></div>
+      <p class="sub">מי הלקוח המושלם? היו ספציפיים (גיל, אזור, מגדר, תחומי עניין). זה מה שמכוון גם את המסרים באתר וגם את עיצוב הלוגו.</p>
+      <div class="field full"><label>תארו את הלקוח האידיאלי</label><textarea name="audience_desc" placeholder="לדוגמה: זוגות צעירים לדירה ראשונה ב...; משקיעים שמחפשים תשואה ב...; מוכרים שרוצים למקסם מחיר..."></textarea></div>
+      <div class="field full"><label>על מי הדגש,קונים או מוכרים?</label><input type="text" name="buyer_seller"></div>
+    </section>
+
+    <!-- 10 -->
+    <section class="section">
+      <div class="shead"><span class="snum">10</span><h2>הכאב שאתם פותרים</h2></div>
+      <p class="sub">מה באמת מטריד את הלקוחות שלכם? ככל שנדבר אל הכאב, כך האתר יתחבר אליהם.</p>
+      <div class="field full"><label>הבעיות שאתם פותרים</label><textarea name="pain" placeholder="פחד לשלם יותר מדי · לא מבינים את השוק · אין זמן לחפש · חשש מעסקה לא בטוחה · נכס שלא נמכר חודשים..."></textarea></div>
+    </section>
+
+    <!-- 11 -->
+    <section class="section">
+      <div class="shead"><span class="snum">11</span><h2>התוצאות שאתם מביאים</h2></div>
+      <p class="sub">בלי הבטחות סרק, מה באמת קורה כשעובדים אתכם?</p>
+      <div class="field full"><label>התוצאות בשטח</label><textarea name="results" placeholder="זמן ממוצע למכירה · אחוז מהמחיר המבוקש · מספר קונים רלוונטיים לנכס..."></textarea></div>
+    </section>
+
+    <!-- 12 -->
+    <section class="section">
+      <div class="shead"><span class="snum">12</span><h2>הוכחות מהשטח</h2></div>
+      <p class="sub">לקוחות מרוצים זה הזהב של אתר נדל"ן. ספרו לנו על מי שמת עליכם.</p>
+      <div class="field full"><label>סיפורי הצלחה <span class="help">(מי הלקוח · מה היה האתגר · מה התוצאה)</span></label><textarea name="testimonials"></textarea></div>
+      <div class="field full"><label>יש המלצות מצולמות / בכתב?</label><input type="text" name="reviews_available"></div>
+    </section>
+
+    <!-- 13 -->
+    <section class="section">
+      <div class="shead"><span class="snum">13</span><h2>איך אתם רוצים להישמע?</h2></div>
+      <p class="sub">הטון השיווקי. סמנו, ואם יש, הדביקו פסקה או פוסט שאתם אוהבים את הסגנון שלו.</p>
+      <div class="chips" style="margin-bottom:24px">
+        <label class="chip"><input type="checkbox" name="tone" value="יוקרתי ואקסקלוסיבי">יוקרתי ואקסקלוסיבי</label>
+        <label class="chip"><input type="checkbox" name="tone" value="חם ואישי">חם ואישי</label>
+        <label class="chip"><input type="checkbox" name="tone" value="מקצועי-סמכותי">מקצועי-סמכותי</label>
+        <label class="chip"><input type="checkbox" name="tone" value="קליל ונגיש">קליל ונגיש</label>
+        <label class="chip"><input type="checkbox" name="tone" value="ישיר ותכל'ס">ישיר ותכל'ס</label>
+      </div>
+      <div class="field full"><label>הדביקו כאן טקסט בסגנון שאתם אוהבים</label><textarea name="tone_sample"></textarea></div>
+    </section>
+
+    <!-- 14 -->
+    <section class="section">
+      <div class="shead"><span class="snum">14</span><h2>ההצעה שאי אפשר לסרב לה</h2></div>
+      <p class="sub">מה גורם למבקר להרים טלפון עכשיו ולא "אחר כך"?</p>
+      <div class="field full"><label>ההצעה הפותחת שלכם</label><textarea name="offer" placeholder="הערכת שווי חינם · פגישת ייעוץ · גישה לנכסים בלעדיים לפני כולם · מדריך לקונה/מוכר להורדה..."></textarea></div>
+    </section>
+
+    <!-- 15 -->
+    <section class="section">
+      <div class="shead"><span class="snum">15</span><h2>מי המתחרים שלכם?</h2></div>
+      <p class="sub">נכיר את השוק כדי לבנות לכם בידול שמנצח.</p>
+      <div class="grid">
+        <div class="field full"><label>המתחרים העיקריים <span class="help">(שמות / אתרים)</span></label><input type="text" name="competitors"></div>
+        <div class="field"><label>מה הם עושים טוב?</label><textarea name="comp_good"></textarea></div>
+        <div class="field"><label>איפה תוכלו לעקוף אותם?</label><textarea name="comp_beat"></textarea></div>
+      </div>
+    </section>
+
+    <!-- 16 -->
+    <section class="section">
+      <div class="shead"><span class="snum">16</span><h2>איך מחפשים אתכם בגוגל?</h2></div>
+      <p class="sub">המילים שהלקוחות מקלידים. זה הדלק של הקידום האורגני.</p>
+      <div class="field full"><label>באילו מילים לקוח יחפש אתכם?</label><textarea name="keywords" placeholder='"דירות למכירה ב..." · "מתווך ב..." · "פרויקט חדש ב..." · "כמה שווה הדירה שלי"'></textarea></div>
+      <div class="field full"><label>מושגים מקצועיים שחשוב לשלב</label><input type="text" name="terms"></div>
+    </section>
+
+    <!-- 17 -->
+    <section class="section">
+      <div class="shead"><span class="snum">17</span><h2>איך פונים אליכם?</h2></div>
+      <p class="sub">הדרכים שבהן מבקר יכול ליצור אתכם קשר ישירות מהאתר. סמנו מה רלוונטי.</p>
+      <div class="chips" style="margin-bottom:24px">
+        <label class="chip"><input type="checkbox" name="cta" value="קביעת צפייה בנכס">קביעת צפייה בנכס</label>
+        <label class="chip"><input type="checkbox" name="cta" value="בקשת הערכת שווי">בקשת הערכת שווי</label>
+        <label class="chip"><input type="checkbox" name="cta" value="וואטסאפ ישיר">וואטסאפ ישיר</label>
+        <label class="chip"><input type="checkbox" name="cta" value="שיחה חוזרת">שיחה חוזרת</label>
+        <label class="chip"><input type="checkbox" name="cta" value="מחשבון משכנתא">מחשבון משכנתא</label>
+        <label class="chip"><input type="checkbox" name="cta" value="הורדת ברושור / קטלוג">הורדת ברושור / קטלוג</label>
+        <label class="chip"><input type="checkbox" name="cta" value="הרשמה לנכסים חדשים">הרשמה לנכסים חדשים</label>
+      </div>
+      <div class="field full"><label>יש CRM שצריך להתחבר אליו? <span class="help">(איזה?)</span></label><input type="text" name="crm"></div>
+      <div class="field full"><label>משהו נוסף שחשוב שנדע?</label><textarea name="anything_else"></textarea></div>
+    </section>
+
+    <!-- ===== PART B: מיתוג ולוגו ===== -->
+    <div class="part-divider">
+      <span class="part-eyebrow">חלק ב׳</span>
+      <h2 class="part-title">מיתוג ולוגו</h2>
+      <p class="part-lead">עכשיו לחלק הכי כיף. כמה שאלות קצרות, ונדע בדיוק איך לעצב לכם לוגו וזהות ויזואלית שמרגישים בדיוק כמו העסק שלכם.</p>
+    </div>
+
+    <!-- 18 -->
+    <section class="section">
+      <div class="shead"><span class="snum">18</span><h2>הלוגו שלכם</h2></div>
+      <p class="sub">כמה פרטים שיכוונו אותנו לכיוון המדויק.</p>
+      <label style="display:block;margin-bottom:11px">באיזו שפה הלוגו יופיע?</label>
+      <div class="chips" style="margin-bottom:24px">
+        <label class="chip"><input type="checkbox" name="logo_language" value="עברית">עברית</label>
+        <label class="chip"><input type="checkbox" name="logo_language" value="אנגלית">אנגלית</label>
+        <label class="chip"><input type="checkbox" name="logo_language" value="עברית ואנגלית">עברית ואנגלית</label>
+        <label class="chip"><input type="checkbox" name="logo_language" value="אחר">אחר</label>
+      </div>
+      <div class="field full"><label>יש סלוגן שחשוב שיופיע עם הלוגו?</label><input type="text" name="logo_slogan"></div>
+      <label style="display:block;margin:6px 0 11px">מה מצב המיתוג כיום?</label>
+      <div class="chips">
+        <label class="chip"><input type="checkbox" name="brand_status" value="עסק חדש בלי מיתוג">עסק חדש, בלי מיתוג</label>
+        <label class="chip"><input type="checkbox" name="brand_status" value="יש מיתוג לרענון">יש מיתוג קיים לרענון</label>
+        <label class="chip"><input type="checkbox" name="brand_status" value="יש לוגו ורוצים חדש">יש לוגו, רוצים חדש</label>
+      </div>
+    </section>
+
+    <!-- 19 -->
+    <section class="section">
+      <div class="shead"><span class="snum">19</span><h2>הערכים של המותג</h2></div>
+      <p class="sub">מה המותג שלכם משדר? סמנו עד שלושה או ארבעה שהכי מדויקים.</p>
+      <div class="chips" style="margin-bottom:18px">
+        <label class="chip"><input type="checkbox" name="brand_values" value="רוגע">רוגע</label>
+        <label class="chip"><input type="checkbox" name="brand_values" value="אסתטיקה">אסתטיקה</label>
+        <label class="chip"><input type="checkbox" name="brand_values" value="יוקרה">יוקרה</label>
+        <label class="chip"><input type="checkbox" name="brand_values" value="פשטות">פשטות</label>
+        <label class="chip"><input type="checkbox" name="brand_values" value="שירותיות">שירותיות</label>
+        <label class="chip"><input type="checkbox" name="brand_values" value="עוצמה">עוצמה</label>
+        <label class="chip"><input type="checkbox" name="brand_values" value="אופטימיות">אופטימיות</label>
+        <label class="chip"><input type="checkbox" name="brand_values" value="חדשנות">חדשנות</label>
+        <label class="chip"><input type="checkbox" name="brand_values" value="יצירתיות">יצירתיות</label>
+        <label class="chip"><input type="checkbox" name="brand_values" value="חופש">חופש</label>
+      </div>
+      <div class="field full"><label>ערך נוסף שחשוב לכם <span class="help">(אם יש)</span></label><input type="text" name="brand_values_other"></div>
+    </section>
+
+    <!-- 20 -->
+    <section class="section">
+      <div class="shead"><span class="snum">20</span><h2>קווי האופי של המותג</h2></div>
+      <p class="sub">אם המותג שלכם היה אדם, איך הייתם מתארים אותו?</p>
+      <div class="chips" style="margin-bottom:18px">
+        <label class="chip"><input type="checkbox" name="brand_character" value="מודרני">מודרני</label>
+        <label class="chip"><input type="checkbox" name="brand_character" value="בוגר">בוגר</label>
+        <label class="chip"><input type="checkbox" name="brand_character" value="ילדותי">ילדותי</label>
+        <label class="chip"><input type="checkbox" name="brand_character" value="רציני">רציני</label>
+        <label class="chip"><input type="checkbox" name="brand_character" value="קליל">קליל</label>
+        <label class="chip"><input type="checkbox" name="brand_character" value="עדין">עדין</label>
+        <label class="chip"><input type="checkbox" name="brand_character" value="רשמי">רשמי</label>
+        <label class="chip"><input type="checkbox" name="brand_character" value="נקי">נקי</label>
+        <label class="chip"><input type="checkbox" name="brand_character" value="נשי">נשי</label>
+        <label class="chip"><input type="checkbox" name="brand_character" value="בהיר">בהיר</label>
+      </div>
+      <div class="field full"><label>קו אופי נוסף <span class="help">(אם יש)</span></label><input type="text" name="brand_character_other"></div>
+    </section>
+
+    <!-- 21 -->
+    <section class="section">
+      <div class="shead"><span class="snum">21</span><h2>כיוון ויזואלי</h2></div>
+      <p class="sub">כל מה שיעזור לנו לכוון את העיצוב נכון.</p>
+      <div class="field full"><label>דימויים או אלמנטים שמתקשרים לעסק שלכם</label><input type="text" name="visual_elements" placeholder="לדוגמה: בית, מפתח, גג, שמש, עץ..."></div>
+      <div class="grid">
+        <div class="field"><label>צבעים מועדפים</label><input type="text" name="preferred_colors"></div>
+        <div class="field"><label>צבעים להימנע מהם</label><input type="text" name="avoid_colors"></div>
+      </div>
+      <div class="field full"><label>משהו שחשוב להימנע ממנו בלוגו או במיתוג?</label><textarea name="brand_avoid"></textarea></div>
+    </section>
+
+    <!-- 22 -->
+    <section class="section">
+      <div class="shead"><span class="snum">22</span><h2>קבצים, השראה ובקשות</h2></div>
+      <p class="sub">יש לכם נכסים קיימים? נשמח לקבל אותם כבר עכשיו. גם דוגמאות שאהבתם עוזרות לנו לקלוע מהר יותר.</p>
+      <div class="field full"><label>הלוגו הקיים שלכם <span class="help">(אם יש. רצוי SVG או PNG, גם PDF מתקבל)</span></label><input type="file" name="existing_logo" accept=".svg,.png,.jpg,.jpeg,.pdf,.ai,.eps"></div>
+      <div class="field full"><label>נכסים קיימים ורפרנסים <span class="help">(תמונות, מצגת מותג, דוגמאות שאהבתם. אפשר כמה קבצים)</span></label><input type="file" name="existing_assets" accept="image/*,.pdf,.svg,.ai,.eps,.zip" multiple></div>
+      <div class="field full"><label>הרבה קבצים או קבצים כבדים? הדביקו לינק <span class="help">(דרייב, וי-טרנספר, דרופבוקס)</span></label><input type="url" name="assets_link"></div>
+      <div class="field full"><label>בקשות מיוחדות או כל דבר נוסף שנדע לפני שמתחילים</label><textarea name="special_requests"></textarea></div>
+    </section>
+
+    <div class="actions no-print">
+      <button type="submit" class="btn btn-submit">שליחת השאלון</button>
+      <button type="button" class="btn ghost" onclick="window.print()">שמירה כ-PDF</button>
+      <span class="note">בלחיצה על שליחה, כל התשובות מגיעות ישירות למייל שלנו.</span>
+    </div>
+   </form>
+
+    <!-- THANK YOU -->
+    <div id="thanks" class="thanks">
+      <div class="badge">✓</div>
+      <h2>תודה רבה! קיבלנו את הפרטים.</h2>
+      <p>אנחנו כבר עוברים על מה שכתבתם ונחזור אליכם עם הצעדים הבאים ליצירת הלוגו והאתר שלכם.</p>
+      <button type="button" class="btn ghost" onclick="window.print()">שמירת עותק כ-PDF</button>
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="fw">AM MARKETING</div>
+    <div class="ft">אתרים שמביאים תוצאות</div>
+  </footer>
+
+<script>
+(function(){
+  var RECIPIENT = "asafmadmoni1@gmail.com";              // fallback inbox (mailto)
+  var ENDPOINT = "https://formsubmit.co/ajax/asafmadmoni1@gmail.com";
+  var form = document.getElementById('qform');
+  var thanks = document.getElementById('thanks');
+
+  function collect(){
+    var data = {};
+    var els = form.querySelectorAll('input[name], textarea[name], select[name]');
+    els.forEach(function(el){
+      if(el.type === 'hidden' || el.name.charAt(0) === '_') return;
+      if(el.type === 'checkbox'){ if(el.checked){ (data[el.name] = data[el.name] || []).push(el.value); } }
+      else if(el.value && el.value.trim()){ data[el.name] = el.value.trim(); }
+    });
+    return data;
+  }
+  function buildText(){
+    var d = collect(), lines = [];
+    for(var k in d){ lines.push(k + ': ' + (Array.isArray(d[k]) ? d[k].join(', ') : d[k])); }
+    return lines.join('\n');
+  }
+  function showThanks(){ form.style.display = 'none'; thanks.style.display = 'block'; window.scrollTo({top:0, behavior:'smooth'}); }
+  function mailtoFallback(){
+    var subject = encodeURIComponent('שאלון אפיון נדל"ן, פנייה חדשה');
+    var body = encodeURIComponent(buildText());
+    window.location.href = 'mailto:' + RECIPIENT + '?subject=' + subject + '&body=' + body;
+    setTimeout(showThanks, 900);
+  }
+
+  if(/[?&]sent=1/.test(location.search)){ showThanks(); }
+  form.addEventListener('submit', function(){
+    var btn = form.querySelector('.btn-submit'); if(btn){ btn.textContent = 'שולח...'; }
+  });
+})();
+</script>
+</body>
+</html>
