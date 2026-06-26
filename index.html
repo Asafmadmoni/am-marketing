@@ -32,7 +32,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="image" href="am-hero.jpg" fetchpriority="high">
-<link rel="preload" as="font" type="font/woff2" crossorigin href="https://fonts.gstatic.com/s/notosanshebrew/v50/or30Q7v33eiDljA1IufXTtVf7V6RvEEdhQlk0LlGxCyaePiWTNzWNf72cWk.woff2">
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@300;400;500;600;700;800;900&family=Heebo:wght@300;400;500;700;800;900&display=swap" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@300;400;500;600;700;800;900&family=Heebo:wght@300;400;500;700;800;900&display=swap"></noscript>
 <style>
@@ -148,7 +147,7 @@
     background:radial-gradient(circle,rgba(255,45,126,.3),rgba(176,107,255,.18) 45%,transparent 70%);filter:blur(54px);
     animation:pulseGlow 6s ease-in-out infinite}
   @keyframes pulseGlow{0%,100%{opacity:.72;transform:scale(1)}50%{opacity:1;transform:scale(1.08)}}
-  .hero-figure{position:relative;z-index:3;width:100%;max-width:540px;border-radius:22px;overflow:hidden;
+  .hero-figure{position:relative;z-index:3;width:100%;max-width:540px;aspect-ratio:642/860;border-radius:22px;overflow:hidden;
     box-shadow:0 70px 130px -34px rgba(255,45,126,.5),0 0 0 1px var(--line)}
   .hero-badge{position:absolute;z-index:6;display:flex;align-items:center;gap:9px;padding:11px 15px;border-radius:13px;
     background:linear-gradient(180deg,rgba(34,27,43,.9),rgba(16,12,22,.92));border:1px solid var(--line);
