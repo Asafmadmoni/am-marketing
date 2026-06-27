@@ -71,8 +71,8 @@ h2{font-weight:800;font-size:clamp(30px,4.2vw,50px);line-height:1.12;letter-spac
 /* LOGO WALL */
 .trust{padding:64px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .trust-lab{text-align:center;font-size:12.5px;letter-spacing:.14em;color:var(--dim);font-weight:600;margin-bottom:34px}
-.logo-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:30px 52px}
-.logo-row img{height:30px;max-width:130px;object-fit:contain;filter:brightness(0) invert(1);opacity:.46;transition:opacity .3s}
+.logo-row{display:grid;grid-template-columns:repeat(4,1fr);gap:40px 44px;align-items:center;justify-items:center;max-width:920px;margin:0 auto}
+.logo-row img{height:30px;max-width:140px;object-fit:contain;filter:brightness(0) invert(1);opacity:.46;transition:opacity .3s}
 .logo-row img:hover{opacity:.85}
 
 /* SERVICES */
@@ -173,6 +173,7 @@ h2{font-weight:800;font-size:clamp(30px,4.2vw,50px);line-height:1.12;letter-spac
   .svc-grid,.work-grid{grid-template-columns:1fr}
   .hero-trust .t b{font-size:22px}
   .tools-row{gap:14px 26px}.tool span{font-size:13.5px}
+  .logo-row{grid-template-columns:repeat(2,1fr);gap:30px 24px}
 }
 </style>
 </head>
@@ -219,10 +220,9 @@ h2{font-weight:800;font-size:clamp(30px,4.2vw,50px);line-height:1.12;letter-spac
       <img src="logos/memora.png" alt="Memora" loading="lazy">
       <img src="logos/ettorney.png" alt="Ettorney" loading="lazy">
       <img src="logos/caesar.png" alt="Caesar Events" loading="lazy">
-      <img src="logos/vfinance.png" alt="V Finance" loading="lazy">
+      <img src="logos/ripit.png" alt="Rip It Studio" loading="lazy" style="height:34px">
       <img src="logos/quickfit.png" alt="QuickFit" loading="lazy">
-      <img src="logos/yesh.png" alt="Yesh Collective" loading="lazy">
-      <img src="logos/neveyarak.png" alt="Neve Yarak" loading="lazy" style="height:44px">
+      <img src="logos/invoicemaven.svg" alt="Invoice Maven" loading="lazy">
     </div>
   </div>
 </section>
