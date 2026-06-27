@@ -111,8 +111,8 @@
   .brand img{width:34px;height:34px;object-fit:contain}
   .mh{font-family:'Poppins',sans-serif;font-weight:800;text-transform:lowercase;letter-spacing:-.02em;line-height:1;color:var(--cream);font-size:22px;direction:ltr;display:inline-flex;align-items:flex-end;white-space:nowrap}
   .mh::after{content:"";width:.17em;height:.17em;background:var(--magenta);border-radius:1px;margin-left:.08em;margin-bottom:.05em}
-  .chub-core .mh-mark{font-family:'Poppins',sans-serif;font-weight:800;text-transform:lowercase;font-size:clamp(30px,4.2vw,46px);line-height:1;letter-spacing:-.03em;color:var(--cream);direction:ltr;display:inline-flex;align-items:flex-end;text-shadow:0 0 18px rgba(176,107,255,.6)}
-  .chub-core .hub-dot{width:.16em;height:.16em;background:var(--magenta);border-radius:2px;margin-left:.05em;margin-bottom:.07em;box-shadow:0 0 14px rgba(255,45,126,.85)}
+  .chub-core .mh-mark{position:relative;font-family:'Poppins',sans-serif;font-weight:800;text-transform:lowercase;font-size:clamp(30px,4.2vw,46px);line-height:1;letter-spacing:-.03em;color:var(--cream);direction:ltr;display:inline-block;text-shadow:0 0 18px rgba(176,107,255,.6)}
+  .chub-core .hub-dot{position:absolute;left:100%;bottom:.04em;width:.16em;height:.16em;background:var(--magenta);border-radius:2px;margin-left:.05em;box-shadow:0 0 14px rgba(255,45,126,.85)}
   .id-card .mh.idmark{font-size:34px;margin-bottom:14px}
   .nav-mid{display:flex;gap:40px;position:absolute;left:50%;transform:translateX(-50%)}
   .nav-mid a{font-weight:500;font-size:14.5px;color:var(--muted);transition:color .25s}
@@ -134,9 +134,9 @@
     border:1px solid var(--line);border-radius:100px;padding:9px 19px 9px 17px;margin-bottom:36px}
   .hero .tag i{width:7px;height:7px;border-radius:50%;background:var(--grad);box-shadow:0 0 0 0 rgba(255,45,126,.6);animation:pulse 2.4s infinite}
   @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,45,126,.5)}70%{box-shadow:0 0 0 10px rgba(255,45,126,0)}100%{box-shadow:0 0 0 0 rgba(255,45,126,0)}}
-  .hero h1{font-weight:900;font-size:clamp(54px,9.6vw,140px);line-height:.88;letter-spacing:-.055em}
+  .hero h1{font-weight:900;font-size:clamp(54px,9.6vw,140px);line-height:.96;letter-spacing:-.055em}
   .hero h1 span{display:block}
-  .hero h1 .ln{padding-bottom:.1em;margin-bottom:-.1em}
+  .hero h1 .ln{padding-top:.14em;margin-top:-.06em;padding-bottom:.1em;margin-bottom:-.16em}
   .hero h1 .grad{background-size:220% auto;animation:gshim 5.5s ease-in-out infinite}
   @keyframes gshim{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
   .hero .lead{font-size:clamp(17px,1.5vw,20px);color:var(--muted);max-width:470px;margin:32px 0 0;line-height:1.6;font-weight:300}
@@ -504,26 +504,26 @@
   <section class="clients"><div class="wrap">
     <div class="lbl">מותגים שכבר עובדים איתנו</div>
     <div class="cgrid anim fade">
-      <a href="https://www.caesarevents.com/" target="_blank" rel="noopener">Caesar Events</a>
+      <span class="nolink">Caesar Events</span>
       <span class="nolink">Honey Bali</span>
-      <a href="https://v-finances.co.il/" target="_blank" rel="noopener">V Finance</a>
+      <span class="nolink">V Finance</span>
       <span class="nolink">טכניקה הפקות</span>
-      <a href="https://www.tikalk.com/" target="_blank" rel="noopener">Tikal</a>
+      <span class="nolink">Tikal</span>
       <span class="nolink">ד. ניב בנייה ופיתוח</span>
-      <a href="https://www.ettorney.co.il/" target="_blank" rel="noopener">Ettorney</a>
-      <a href="https://memora.co.il/" target="_blank" rel="noopener">Memora</a>
-      <a href="https://connect-ins.co.il/" target="_blank" rel="noopener">Connect</a>
-      <a href="https://www.neveyarakwinery.com/" target="_blank" rel="noopener">Neve Yarak Winery</a>
-      <a href="https://quickfit.co.il/" target="_blank" rel="noopener">QuickFit</a>
-      <a href="https://emsclub.co.il/" target="_blank" rel="noopener">EMS Club</a>
-      <a href="https://www.invoice-maven.co.il/" target="_blank" rel="noopener">Invoice Maven</a>
-      <a href="https://yesh-collective.co.il/" target="_blank" rel="noopener">Yesh Collective</a>
-      <a href="https://www.ilansport1.com/" target="_blank" rel="noopener">Ilan Sport</a>
-      <a href="https://basebyraz.co.il/" target="_blank" rel="noopener">Base by Raz</a>
-      <a href="https://www.avdan.co.il/" target="_blank" rel="noopener">Avdan</a>
-      <a href="https://ripitstudio.com/" target="_blank" rel="noopener">Rip It Studio</a>
-      <a href="https://www.selectedplaces.co.il/" target="_blank" rel="noopener">Selected Places</a>
-      <a href="https://solpilatesil.com/" target="_blank" rel="noopener">Sol Pilates</a>
+      <span class="nolink">Ettorney</span>
+      <span class="nolink">Memora</span>
+      <span class="nolink">Connect</span>
+      <span class="nolink">Neve Yarak Winery</span>
+      <span class="nolink">QuickFit</span>
+      <span class="nolink">EMS Club</span>
+      <span class="nolink">Invoice Maven</span>
+      <span class="nolink">Yesh Collective</span>
+      <span class="nolink">Ilan Sport</span>
+      <span class="nolink">Base by Raz</span>
+      <span class="nolink">Avdan</span>
+      <span class="nolink">Rip It Studio</span>
+      <span class="nolink">Selected Places</span>
+      <span class="nolink">Sol Pilates</span>
     </div>
   </div></section>
 
