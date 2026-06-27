@@ -184,9 +184,11 @@
   .clients{padding:104px 0 30px}
   .clients .lbl{text-align:center;color:var(--dim);font-weight:600;font-size:12.5px;letter-spacing:.2em;margin-bottom:50px}
   .cgrid{display:grid;grid-template-columns:repeat(5,1fr);border:1px solid var(--line);border-radius:16px;overflow:hidden}
-  .cgrid a,.cgrid .nolink{display:flex;align-items:center;justify-content:center;text-align:center;min-height:104px;padding:18px 14px;
+  .cgrid a,.cgrid .nolink{display:flex;align-items:center;justify-content:center;text-align:center;min-height:118px;padding:22px 18px;
     font-weight:600;font-size:15.5px;color:var(--muted);border-left:1px solid var(--line);border-bottom:1px solid var(--line);transition:color .25s,background .25s}
-  .cgrid a:hover{color:var(--text);background:rgba(240,230,220,.025)}
+  .cgrid .nolink:hover{color:var(--text);background:rgba(240,230,220,.02)}
+  .cgrid .clogo{max-width:100%;max-height:46px;width:auto;object-fit:contain;filter:brightness(0) invert(1);opacity:.5;transition:opacity .3s,filter .3s}
+  .cgrid .nolink:hover .clogo{opacity:.92;filter:brightness(0) invert(1)}
 
   /* SERVICES with hover-reveal */
   .svc-row{display:grid;grid-template-columns:1fr auto;align-items:center;gap:28px;padding:40px 8px;
@@ -504,25 +506,25 @@
   <section class="clients"><div class="wrap">
     <div class="lbl">מותגים שכבר עובדים איתנו</div>
     <div class="cgrid anim fade">
-      <span class="nolink">Caesar Events</span>
+      <span class="nolink"><img class="clogo" src="logos/caesar.png" alt="Caesar Events" loading="lazy"></span>
       <span class="nolink">Honey Bali</span>
-      <span class="nolink">V Finance</span>
+      <span class="nolink"><img class="clogo" src="logos/vfinance.png" alt="V Finance" loading="lazy"></span>
       <span class="nolink">טכניקה הפקות</span>
-      <span class="nolink">Tikal</span>
+      <span class="nolink"><img class="clogo" src="logos/tikal.svg" alt="Tikal" loading="lazy"></span>
       <span class="nolink">ד. ניב בנייה ופיתוח</span>
-      <span class="nolink">Ettorney</span>
-      <span class="nolink">Memora</span>
-      <span class="nolink">Connect</span>
-      <span class="nolink">Neve Yarak Winery</span>
-      <span class="nolink">QuickFit</span>
+      <span class="nolink"><img class="clogo" src="logos/ettorney.png" alt="Ettorney" loading="lazy"></span>
+      <span class="nolink"><img class="clogo" src="logos/memora.png" alt="Memora" loading="lazy"></span>
+      <span class="nolink"><img class="clogo" src="logos/connect.svg" alt="Connect" loading="lazy"></span>
+      <span class="nolink"><img class="clogo" src="logos/neveyarak.png" alt="Neve Yarak Winery" loading="lazy" style="max-height:64px"></span>
+      <span class="nolink"><img class="clogo" src="logos/quickfit.png" alt="QuickFit" loading="lazy"></span>
       <span class="nolink">EMS Club</span>
-      <span class="nolink">Invoice Maven</span>
-      <span class="nolink">Yesh Collective</span>
-      <span class="nolink">Ilan Sport</span>
+      <span class="nolink"><img class="clogo" src="logos/invoicemaven.svg" alt="Invoice Maven" loading="lazy"></span>
+      <span class="nolink"><img class="clogo" src="logos/yesh.png" alt="Yesh Collective" loading="lazy"></span>
+      <span class="nolink"><img class="clogo" src="logos/ilansport.png" alt="Ilan Sport" loading="lazy" style="max-height:58px"></span>
       <span class="nolink">Base by Raz</span>
       <span class="nolink">Avdan</span>
-      <span class="nolink">Rip It Studio</span>
-      <span class="nolink">Selected Places</span>
+      <span class="nolink"><img class="clogo" src="logos/ripit.png" alt="Rip It Studio" loading="lazy" style="max-height:56px"></span>
+      <span class="nolink"><img class="clogo" src="logos/selectedplaces.png" alt="Selected Places" loading="lazy"></span>
       <span class="nolink">Sol Pilates</span>
     </div>
   </div></section>
