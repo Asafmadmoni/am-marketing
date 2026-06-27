@@ -453,19 +453,6 @@
     .hero-meta{gap:28px}
   }
 </style>
-<style>
-/* ===== MADHOUSE — controlled chaos ===== */
-@keyframes madShake{0%{transform:translate(0,0)}12%{transform:translate(-9px,5px) rotate(-.5deg)}24%{transform:translate(8px,-6px) rotate(.4deg)}36%{transform:translate(-7px,7px)}48%{transform:translate(6px,-4px) rotate(-.3deg)}60%{transform:translate(-4px,3px)}74%{transform:translate(3px,-2px)}88%{transform:translate(-1px,1px)}100%{transform:translate(0,0)}}
-.mad-shake{animation:madShake .62s cubic-bezier(.36,.07,.19,.97)}
-.mad-flash{position:fixed;inset:0;z-index:9999;background:radial-gradient(circle at 50% 46%,#fff,#ffcfe6 38%,rgba(176,107,255,.4) 60%,transparent 78%);pointer-events:none;animation:madFlash .5s ease-out forwards}
-@keyframes madFlash{0%{opacity:.95}100%{opacity:0}}
-.mad-wave{position:absolute;left:50%;top:44%;width:36px;height:36px;border:3px solid rgba(255,45,126,.85);border-radius:50%;transform:translate(-50%,-50%);pointer-events:none;z-index:6;mix-blend-mode:screen;animation:madWave 1s ease-out forwards}
-@keyframes madWave{0%{opacity:.95;transform:translate(-50%,-50%) scale(.2)}100%{opacity:0;transform:translate(-50%,-50%) scale(30)}}
-.mad-stamp{position:absolute;top:17%;left:5%;z-index:6;font-family:'Poppins',sans-serif;font-weight:700;font-size:12px;letter-spacing:2.5px;line-height:1.35;color:var(--magenta);border:1.5px solid var(--magenta);border-radius:7px;padding:7px 13px;transform:rotate(-9deg);text-transform:uppercase;opacity:0;box-shadow:0 0 24px rgba(255,45,126,.25);direction:ltr;text-align:center;animation:madStampIn .5s ease .85s forwards}
-@keyframes madStampIn{0%{opacity:0;transform:rotate(-9deg) scale(.6)}70%{opacity:.95;transform:rotate(-9deg) scale(1.12)}100%{opacity:.85;transform:rotate(-9deg) scale(1)}}
-@media(max-width:760px){.mad-stamp{display:none}}
-@media(prefers-reduced-motion:reduce){.mad-shake,.mad-flash,.mad-wave{animation:none!important}.mad-stamp{opacity:.85;animation:none}}
-</style>
 </head>
 <body>
   <div class="cur cur-dot" id="curDot"></div>
@@ -488,7 +475,6 @@
   <section class="hero" id="top">
     <div class="glow a"></div><div class="glow b"></div>
     <div class="bgword">MH</div>
-    <div class="mad-stamp">we're all<br>mad here</div>
     <div class="wrap"><div class="hero-grid">
       <div class="hero-copy">
         <h1><span class="ln"><span>פחות שפיות.</span></span><span class="ln"><span>יותר <em class="grad" style="font-style:normal">תוצאות</em>.</span></span></h1>
@@ -997,30 +983,6 @@
     setTimeout(function(){document.querySelectorAll('.anim').forEach(function(el){if(parseFloat(getComputedStyle(el).opacity)<.05){el.style.opacity='1';el.style.transform='none';}});},2600);
     ScrollTrigger.refresh();
   });
-</script>
-<script>
-/* MADHOUSE crash-intro + glitch scramble (self-contained, graceful) */
-(function(){
-  try{
-    var hero=document.querySelector('.hero'); if(!hero)return;
-    document.body.classList.add('mad-shake');
-    var flash=document.createElement('div'); flash.className='mad-flash'; document.body.appendChild(flash);
-    var wave=document.createElement('div'); wave.className='mad-wave'; hero.appendChild(wave);
-    setTimeout(function(){document.body.classList.remove('mad-shake');},650);
-    setTimeout(function(){if(flash.parentNode)flash.parentNode.removeChild(flash);},560);
-    setTimeout(function(){if(wave.parentNode)wave.parentNode.removeChild(wave);},1050);
-    var chars='!<>-_/[]{}=+*?#@%אבגדהוזחטיכךלמםנןסעפףצץקרשת0123456789';
-    var spans=hero.querySelectorAll('h1 .ln>span');
-    [].forEach.call(spans,function(el){
-      var finalHTML=el.innerHTML, finalText=el.textContent, len=finalText.length, frame=0;
-      var iv=setInterval(function(){
-        if(frame/2>=len){ el.innerHTML=finalHTML; clearInterval(iv); return; }
-        var out=''; for(var i=0;i<len;i++){ out += (frame/2>i) ? finalText.charAt(i) : chars.charAt(Math.floor(Math.random()*chars.length)); }
-        el.textContent=out; frame++;
-      },38);
-    });
-  }catch(e){}
-})();
 </script>
 </body>
 </html>
