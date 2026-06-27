@@ -361,11 +361,12 @@
   .wordband .vig{position:absolute;inset:0;z-index:3;pointer-events:none;
     background:radial-gradient(120% 75% at 50% 42%,transparent 52%,rgba(4,2,8,.62) 100%)}
   .wordband .wrap{position:relative;z-index:4}
-  .wb-title{position:relative;display:block;direction:ltr;text-align:center;font-weight:900;font-size:clamp(40px,11vw,128px);line-height:.9;letter-spacing:-.04em;
+  .wb-title{position:relative;display:block;direction:ltr;text-align:center;font-family:'Poppins',sans-serif;font-weight:800;text-transform:lowercase;font-size:clamp(40px,11vw,128px);line-height:.9;letter-spacing:-.03em;
     background-image:linear-gradient(100deg,transparent calc(var(--sw,-40%) - 13%),rgba(255,255,255,.7) var(--sw,-40%),transparent calc(var(--sw,-40%) + 13%)),linear-gradient(106deg,#cf95ff 0%,#ff62a3 48%,#ff2d7e 100%);
     -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;
     filter:drop-shadow(0 0 18px rgba(255,45,126,.4)) drop-shadow(0 0 48px rgba(176,107,255,.28))}
   .wb-sub{position:relative;z-index:4;color:var(--muted);font-weight:300;margin-top:36px;font-size:18px;letter-spacing:.02em}
+  .wb-dot{display:inline-block;width:.38em;height:.38em;background:var(--magenta);border-radius:4px;margin-left:.05em;-webkit-text-fill-color:initial;vertical-align:baseline;box-shadow:0 0 30px rgba(255,45,126,.75)}
 
   /* ABOUT */
   .about{position:relative;overflow:hidden}
@@ -487,7 +488,7 @@
       </div>
       <div class="hero-visual">
         <div class="hero-figure anim fade" id="heroFig">
-          <img src="am-hero.jpg" alt="MADHOUSE" width="642" height="860" decoding="async" fetchpriority="high" onerror="document.getElementById('heroFig').outerHTML='<div class=\'hero-fallback\'><b>AM</b></div>'">
+          <img src="am-hero.jpg" alt="MADHOUSE" width="642" height="860" decoding="async" fetchpriority="high" onerror="document.getElementById('heroFig').outerHTML='<div class=\'hero-fallback\'><b>mh</b></div>'">
         </div>
         <div class="hero-badge b2"><svg aria-hidden="true"><use href="#ic-star"/></svg><b>5.0</b><span class="sub">100+ לקוחות</span></div>
       </div>
@@ -606,7 +607,7 @@
     </div>
     <div class="svc-list">
       <a href="#contact" class="svc-row anim fade" data-img="am-w1.jpg"><div class="svc-main"><span class="svc-num">01</span><h3>אתרים <span class="grad">ודפי נחיתה</span></h3><p>אתרים שממירים, לא רק נראים טוב. נטענים מהר, ומובילים לפעולה.</p></div><span class="svc-arrow">↗</span></a>
-      <a href="#contact" class="svc-row anim fade" data-img="am-logo.png"><div class="svc-main"><span class="svc-num">02</span><h3>מיתוג <span class="grad">ולוגו</span></h3><p>זהות חזותית שמבדלת אתכם מהמתחרים ונשארת בזיכרון.</p></div><span class="svc-arrow">↗</span></a>
+      <a href="#contact" class="svc-row anim fade" data-img="am-w2.jpg"><div class="svc-main"><span class="svc-num">02</span><h3>מיתוג <span class="grad">ולוגו</span></h3><p>זהות חזותית שמבדלת אתכם מהמתחרים ונשארת בזיכרון.</p></div><span class="svc-arrow">↗</span></a>
       <a href="#contact" class="svc-row anim fade" data-img="am-w2.jpg"><div class="svc-main"><span class="svc-num">03</span><h3>קמפיינים <span class="grad">ומדיה</span></h3><p>לידים אמיתיים מגוגל, פייסבוק ואינסטגרם. תקציב שעובד, לא נשרף.</p></div><span class="svc-arrow">↗</span></a>
       <a href="#contact" class="svc-row anim fade" data-img="am-w5.jpg"><div class="svc-main"><span class="svc-num">04</span><h3>אסטרטגיה <span class="grad">וצמיחה</span></h3><p>תוכנית פעולה שמודדים אותה במספרים, לא בתחושות.</p></div><span class="svc-arrow">↗</span></a>
       <a href="#contact" class="svc-row anim fade" data-img="am-w3.jpg"><div class="svc-main"><span class="svc-num">05</span><h3>קידום <span class="grad">אורגני (SEO)</span></h3><p>להופיע גבוה בתוצאות החיפוש של גוגל ולהביא תנועה איכותית, בלי לשלם על כל קליק.</p></div><span class="svc-arrow">↗</span></a>
@@ -770,7 +771,7 @@
     <div class="halo"></div>
     <div class="vig"></div>
     <div class="wrap">
-      <h2 class="wb-title">AM<br>MARKETING</h2>
+      <h2 class="wb-title">madhouse<i class="wb-dot"></i></h2>
       <p class="wb-sub">מותג. אתר. קמפיינים. תוצאות.</p>
     </div>
   </section>
