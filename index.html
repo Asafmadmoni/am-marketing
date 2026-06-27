@@ -30,8 +30,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="image" href="am-hero.jpg" fetchpriority="high">
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@300;400;500;600;700;800;900&family=Heebo:wght@300;400;500;700;800;900&family=Permanent+Marker&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@300;400;500;600;700;800;900&family=Heebo:wght@300;400;500;700;800;900&family=Permanent+Marker&display=swap"></noscript>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@300;400;500;600;700;800;900&family=Heebo:wght@300;400;500;700;800;900&family=Poppins:wght@700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@300;400;500;600;700;800;900&family=Heebo:wght@300;400;500;700;800;900&family=Poppins:wght@700;800&display=swap"></noscript>
 <style>
   :root{
     --bg:#0b0a0c; --bg-2:#141215; --bg-3:#1c191e;
@@ -109,9 +109,10 @@
   nav{display:flex;align-items:center;justify-content:space-between;height:84px}
   .brand{display:flex;align-items:center;gap:13px;font-weight:700;font-size:15px;letter-spacing:.22em}
   .brand img{width:34px;height:34px;object-fit:contain}
-  .mh{font-family:'Permanent Marker',cursive;letter-spacing:.5px;line-height:1;color:var(--cream);font-size:23px;white-space:nowrap}
-  .chub-core .mh-mark{font-family:'Permanent Marker',cursive;font-size:30px;line-height:1;color:var(--cream);text-shadow:0 0 16px rgba(176,107,255,.6)}
-  .id-card .mh.idmark{font-size:36px;display:block;margin-bottom:14px}
+  .mh{font-family:'Poppins',sans-serif;font-weight:800;text-transform:lowercase;letter-spacing:-.02em;line-height:1;color:var(--cream);font-size:22px;direction:ltr;display:inline-flex;align-items:flex-end;white-space:nowrap}
+  .mh::after{content:"";width:.17em;height:.17em;background:var(--magenta);border-radius:1px;margin-left:.08em;margin-bottom:.05em}
+  .chub-core .mh-mark{font-family:'Poppins',sans-serif;font-weight:800;text-transform:lowercase;font-size:27px;line-height:1;letter-spacing:-.02em;color:var(--cream);text-shadow:0 0 16px rgba(176,107,255,.55)}
+  .id-card .mh.idmark{font-size:34px;margin-bottom:14px}
   .nav-mid{display:flex;gap:40px;position:absolute;left:50%;transform:translateX(-50%)}
   .nav-mid a{font-weight:500;font-size:14.5px;color:var(--muted);transition:color .25s}
   .nav-mid a:hover{color:var(--text)}
