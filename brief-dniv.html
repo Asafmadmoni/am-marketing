@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>תיק אפיון · ד.ניב בנייה ופיתוח · MADHOUSE</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;800;900&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0b0a0c;--bg-2:#121016;--bg-3:#17141c;--cream:#ece6dc;--text:#ece6dc;
+  --magenta:#ff2d7e;--purple:#b06bff;--muted:#9a938a;--dim:#827b72;
+  --line:rgba(240,230,220,.09);--line-2:rgba(240,230,220,.14);
+  --grad:linear-gradient(108deg,#a855f7 0%,#ff2d7e 100%);
+  --font:'Heebo',system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.65;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1000px;margin:0 auto;padding:0 28px}
+.grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+a{color:var(--purple);text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* HEADER */
+.doc-head{position:relative;overflow:hidden;border-bottom:1px solid var(--line);padding:48px 0 44px}
+.doc-head .glow{position:absolute;width:560px;height:560px;border-radius:50%;background:radial-gradient(circle,rgba(176,107,255,.22),transparent 62%);filter:blur(60px);top:-260px;left:-120px;pointer-events:none}
+.doc-head .top{display:flex;align-items:center;justify-content:space-between;position:relative;z-index:2}
+.brand{font-family:'Poppins',sans-serif;font-weight:800;text-transform:lowercase;font-size:22px;letter-spacing:-.02em;color:var(--cream);direction:ltr;display:inline-flex;align-items:flex-end;line-height:1}
+.brand::after{content:"";width:.17em;height:.17em;background:var(--magenta);border-radius:1px;margin-left:.08em;margin-bottom:.04em}
+.doc-tag{font-size:12px;letter-spacing:.16em;color:var(--dim);font-weight:600}
+.doc-head h1{position:relative;z-index:2;font-weight:900;font-size:clamp(30px,5vw,52px);letter-spacing:-.03em;line-height:1.08;margin-top:34px}
+.doc-head .sub{position:relative;z-index:2;color:var(--muted);font-size:16px;margin-top:12px;font-weight:300}
+.chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px;position:relative;z-index:2}
+.chip{font-size:12.5px;font-weight:500;color:var(--cream);border:1px solid var(--line-2);border-radius:100px;padding:6px 14px;background:rgba(240,230,220,.02)}
+.chip b{color:var(--purple);font-weight:700}
+
+/* SECTIONS */
+.sec{padding:48px 0;border-bottom:1px solid var(--line)}
+.sec:last-of-type{border-bottom:none}
+.sec-lab{display:flex;align-items:center;gap:11px;font-size:12.5px;font-weight:700;letter-spacing:.12em;color:var(--muted);margin-bottom:24px}
+.sec-lab .n{font-family:'Poppins',sans-serif;font-weight:800;font-size:13px;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sec h2{font-weight:800;font-size:clamp(22px,3vw,30px);letter-spacing:-.025em;margin-bottom:6px}
+.lede{color:var(--cream);font-size:16.5px;font-weight:400;line-height:1.7}
+.body-text{color:var(--muted);font-size:15.5px;font-weight:300;white-space:pre-line}
+.body-text+.body-text{margin-top:14px}
+
+/* GRID CARDS */
+.grid{display:grid;gap:14px;margin-top:6px}
+.g2{grid-template-columns:1fr 1fr}
+.g3{grid-template-columns:repeat(3,1fr)}
+.card{background:var(--bg-2);border:1px solid var(--line);border-radius:14px;padding:22px 22px}
+.card h3{font-size:13px;letter-spacing:.06em;color:var(--dim);font-weight:600;margin-bottom:9px}
+.card p{font-size:15px;color:var(--cream);font-weight:400;white-space:pre-line}
+.card .big{font-weight:800;font-size:30px;letter-spacing:-.02em;line-height:1}
+.card .big+span{display:block;color:var(--dim);font-size:13px;margin-top:6px}
+
+/* DATA LIST */
+.dl{display:grid;grid-template-columns:170px 1fr;gap:0;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.dl dt{padding:14px 18px;font-size:13.5px;color:var(--dim);font-weight:600;border-bottom:1px solid var(--line);background:rgba(240,230,220,.015)}
+.dl dd{padding:14px 18px;font-size:15px;color:var(--cream);border-bottom:1px solid var(--line);border-right:1px solid var(--line)}
+.dl dt:last-of-type,.dl dd:last-of-type{border-bottom:none}
+
+/* PILLS */
+.pills{display:flex;flex-wrap:wrap;gap:10px}
+.pill{border:1px solid var(--line-2);border-radius:10px;padding:11px 16px;font-size:14.5px;font-weight:500;color:var(--cream);background:var(--bg-2)}
+.pill .r{display:inline-block;font-family:'Poppins',sans-serif;font-weight:800;font-size:12px;margin-left:8px;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+.note{background:var(--bg-2);border:1px solid var(--line);border-right:3px solid var(--purple);border-radius:12px;padding:18px 20px;color:var(--muted);font-size:15px;font-weight:300;white-space:pre-line}
+
+footer{padding:34px 0;text-align:center;color:var(--dim);font-size:13px;border-top:1px solid var(--line)}
+
+@media(max-width:680px){
+  .g2,.g3{grid-template-columns:1fr}
+  .dl{grid-template-columns:1fr}
+  .dl dt{border-bottom:none}.dl dd{border-right:none}
+}
+@media print{body{background:#fff;color:#111}.doc-head .glow{display:none}}
+</style>
+</head>
+<body>
+
+<header class="doc-head"><div class="wrap">
+  <div class="glow"></div>
+  <div class="top">
+    <span class="brand">madhouse</span>
+    <span class="doc-tag">תיק אפיון לקוח</span>
+  </div>
+  <h1>ד.ניב בנייה ופיתוח <span class="grad">בע״מ</span></h1>
+  <p class="sub">חברת בנייה מוסדית וציבורית · יזמות וקבלנות · פעילות ארצית עם דגש על אזור השרון</p>
+  <div class="chips">
+    <span class="chip"><b>23</b> שנות ותק</span>
+    <span class="chip"><b>2003</b> שנת הקמה</span>
+    <span class="chip"><b>100+</b> עובדים</span>
+    <span class="chip"><b>מאות</b> פרויקטים</span>
+    <span class="chip">ח.פ. 513457986</span>
+  </div>
+</div></header>
+
+<!-- 01 CONTACT -->
+<section class="sec"><div class="wrap">
+  <div class="sec-lab"><span class="n">01</span> פרטי התקשרות</div>
+  <dl class="dl">
+    <dt>שם החברה</dt><dd>ד.ניב בנייה ופיתוח בע״מ</dd>
+    <dt>איש קשר</dt><dd>המשרד</dd>
+    <dt>טלפון</dt><dd>09-744-4690</dd>
+    <dt>אימייל</dt><dd><a href="mailto:info@dalal-niv.co.il">info@dalal-niv.co.il</a></dd>
+    <dt>כתובת</dt><dd>ששת הימים 21, הוד השרון</dd>
+    <dt>ח.פ. / רישיון</dt><dd>513457986</dd>
+    <dt>מייסד ובעלים</dt><dd>חן דלל (הקמה 2003)</dd>
+    <dt>אתר קיים</dt><dd>אין</dd>
+  </dl>
+</div></section>
+
+<!-- 02 ABOUT -->
+<section class="sec"><div class="wrap">
+  <div class="sec-lab"><span class="n">02</span> על החברה</div>
+  <p class="body-text">החברה הוקמה על ידי חן דלל, הבעלים והמייסד, בשנת 2003. עוסקת בבנייה מוסדית וציבורית וכן בתחומי התשתיות. הדגש מאז ומתמיד היה השירות למזמינים ואיכות ללא פשרות, תחת עמידה בלוחות זמנים קצרים ולחוצים והשלמת כל שלבי הפרויקט בזמן שהוגדר.
+
+החברה התחילה את דרכה בהוד השרון, התפתחה, וכיום עובדת בכל רחבי הארץ. הלקוחות הם לקוחות קבועים של שנים שמרוצים מעבודות קודמות, ולכן הפכו אותנו לקבלני הבית במכרזי מסגרת. החברה מעסיקה כיום מעל 100 עובדים ואנשי צוות בתחומים שונים, שנותנים מענה מיטבי ומיידי לכל בעיה או תקלה, בכל שעה. גם בעיתות משבר וחירום (מלחמות, מגפות) פעלנו תחת לחצים ומתכונות מיוחדות כדי לשמור על השגרה ולתת את המענה הטוב ביותר.
+
+חברה עם הרבה ניסיון וצוות מנוסה שעבר פרויקטים מסובכים ומורכבים. דוגלים במצוינות וביחס אישי לכל פונה.</p>
+</div></section>
+
+<!-- 03 CORE -->
+<section class="sec"><div class="wrap">
+  <div class="sec-lab"><span class="n">03</span> הליבה העסקית</div>
+  <p class="lede">שירות וביצוע ברמה הכי גבוהה שיש, עם עמידה בזמנים מוחלטת. לא קרה שפרויקט לא נמסר בזמן.</p>
+  <div class="grid g3" style="margin-top:20px">
+    <div class="card"><h3>יתרון מרכזי 01</h3><p>איכות</p></div>
+    <div class="card"><h3>יתרון מרכזי 02</h3><p>עמידה בזמנים</p></div>
+    <div class="card"><h3>יתרון מרכזי 03</h3><p>ניסיון</p></div>
+  </div>
+  <div class="card" style="margin-top:14px"><h3>מסר מבדל (USP)</h3><p>השירות, איכות העבודה והמענה המיידי לכל בעיה. יחס אישי וירידה לפרטים הקטנים ביותר כדי להוציא את המזמין מרוצה.</p></div>
+  <div class="card" style="margin-top:14px"><h3>בסיס האמון</h3><p>ותק של 23 שנים עם צוות רחב: מהנדסים, מנהלי עבודה ומנהלי פרויקטים בצד הביצועי, וטובי האנשים במחלקות המשרדיות. עבודה בכל הארץ עם דגש על אזור השרון.</p></div>
+</div></section>
+
+<!-- 04 AUDIENCE -->
+<section class="sec"><div class="wrap">
+  <div class="sec-lab"><span class="n">04</span> קהל היעד והשירותים</div>
+  <div class="card"><h3>מי הלקוחות</h3><p>בעיקר עיריות ומוסדות ציבוריים: בתי חולים, קופות חולים, חברות כלכליות, ישיבות, אוניברסיטאות וגופים מסחריים.</p></div>
+  <div class="grid g2" style="margin-top:14px">
+    <div class="card"><h3>השירותים</h3><p>תחום מוסדי שעובד בעיקר על מכרזים לפרויקטים ומכרזי מסגרת עם עיריות. בנייה מוסדית, ציבורית ותשתיות.</p></div>
+    <div class="card"><h3>סוג נכס / תחום</h3><p>מסחרי / מוסדי</p></div>
+  </div>
+  <div class="grid g2" style="margin-top:14px">
+    <div class="card"><h3>אזורי פעילות</h3><p>רוב הארץ, עם התמקדות במרכז ובשפלה.</p></div>
+    <div class="card"><h3>אזורי ליבה</h3><p>כפר סבא · הוד השרון · פתח תקווה</p></div>
+  </div>
+</div></section>
+
+<!-- 05 PAIN/RESULTS -->
+<section class="sec"><div class="wrap">
+  <div class="sec-lab"><span class="n">05</span> הכאב שאנחנו פותרים</div>
+  <p class="body-text">פותרים את בעיית לוחות הזמנים הלחוצים שהלקוחות דורשים לעמוד בהם. בית ספר, למשל, חייב להיפתח ב-1.9 בכל מחיר. בית חולים, מחלקה שלא מתפקדת חייבת לחזור לפעולה במהירות וביעילות מקסימלית.
+
+נותנים ראש שקט ומקצועיות ברמה הכי גבוהה למזמין, עם פתרונות הנדסיים ומקצועיים בעזרת הצוות המנוסה והיועצים.</p>
+  <div class="note" style="margin-top:18px">התוצאה למזמין: מי שעובד איתנו יכול להיות בטוח שנעמוד בכל משימה, קשה ובלתי אפשרית ככל שתיראה על הנייר. הופכים את הבלתי אפשרי לאפשרי בעזרת מקצועיות, מיומנות וניסיון.</div>
+</div></section>
+
+<!-- 06 COMPETITORS -->
+<section class="sec"><div class="wrap">
+  <div class="sec-lab"><span class="n">06</span> מתחרים ובידול</div>
+  <div class="pills" style="margin-bottom:16px">
+    <span class="pill">גרין פרויקטים</span>
+    <span class="pill">אוגלים</span>
+    <span class="pill">בוני בניין</span>
+  </div>
+  <div class="grid g2">
+    <div class="card"><h3>במה הם דומים</h3><p>חברות באותה נישה, צבר פרויקטים וסגנון בנייה דומה בתחום המוסדי (עיריות, בתי חולים, חברות כלכליות).</p></div>
+    <div class="card"><h3>במה אנחנו מנצחים</h3><p>שירות מהיר ובלי פשרות ברמה הכי גבוהה, היחס למזמין ולבקשות המיוחדות שלו, יחס אישי וירידה לפרטים הקטנים ביותר.</p></div>
+  </div>
+</div></section>
+
+<!-- 07 BRAND -->
+<section class="sec"><div class="wrap">
+  <div class="sec-lab"><span class="n">07</span> כיוון מיתוג ולוגו</div>
+  <dl class="dl">
+    <dt>סטטוס</dt><dd>יש לוגו קיים, רוצים חדש (קובץ קיים: IMG_8416.png)</dd>
+    <dt>סלוגן רצוי</dt><dd>בסגנון „ד.ניב, אמינות לפני הכל”</dd>
+    <dt>שפת לוגו</dt><dd>עברית ואנגלית</dd>
+    <dt>ערכי מותג</dt><dd>יצירתיות · זמינות</dd>
+    <dt>אופי מותג</dt><dd>רציני · יציבות לאורך שנים</dd>
+    <dt>טון תקשורת</dt><dd>מקצועי-סמכותי</dd>
+    <dt>אלמנטים ויזואליים</dt><dd>בניינים, מנופים, כלי צמ״ה, תוכניות בנייה ושרטוטים</dd>
+    <dt>צבעים מועדפים</dt><dd>אין העדפה, פתוחים להצעות</dd>
+    <dt>צבעים להימנע</dt><dd>אין</dd>
+  </dl>
+</div></section>
+
+<!-- 08 SEO -->
+<section class="sec"><div class="wrap">
+  <div class="sec-lab"><span class="n">08</span> מילות מפתח ומסרים</div>
+  <div class="grid g2">
+    <div class="card"><h3>מילות מפתח</h3><p>פרויקטים בתחום הציבורי · חיפוש ספציפי לפי שם החברה („ד.ניב בנייה ופיתוח”) כהתעניינות של מזמין חדש.</p></div>
+    <div class="card"><h3>מסרים מרכזיים</h3><p>איכות · שירות · עמידה בזמנים, ללא פשרות.</p></div>
+  </div>
+</div></section>
+
+<!-- 09 OPS -->
+<section class="sec"><div class="wrap">
+  <div class="sec-lab"><span class="n">09</span> המרה, מערכות ונכסים</div>
+  <dl class="dl">
+    <dt>קריאה לפעולה</dt><dd>שיחה חוזרת (Call Me Back)</dd>
+    <dt>מערכת CRM</dt><dd>אין. קיימת רק מערכת הגשת קורות חיים (שמתוכננת לפיתוח)</dd>
+    <dt>קהל ממוקד</dt><dd>משקיעים, עיריות ומוסדות ציבוריים</dd>
+    <dt>נכסים זמינים</dt><dd>צילומי רחפן</dd>
+    <dt>המלצות</dt><dd>יתווספו בהמשך, מבעלי תפקידי מפתח בעיריות וחברות כלכליות, בכתב ובתצלום</dd>
+  </dl>
+  <div class="note" style="margin-top:18px">בקשות מיוחדות: יצורפו בהמשך כל הפרויקטים בצורה מסודרת, עם גודל מדויק של כל פרויקט, אדריכלים ומזמינים מיוחדים שעבדנו איתם.
+
+הערת לקוח: „שיהיה לנו בהצלחה, סומכים עליכם שתדעו לקחת, לסגנן, לשנות ולהנות מזה, סיפור אמיתי.”</div>
+</div></section>
+
+<footer><span class="brand" style="font-size:16px">madhouse</span> · תיק אפיון · ד.ניב בנייה ופיתוח בע״מ</footer>
+
+</body>
+</html>
