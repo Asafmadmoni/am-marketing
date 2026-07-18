@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ספר מותג · MADHOUSE</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;800;900&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0b0a0c;--bg-2:#121016;--bg-3:#17141c;--cream:#ece6dc;--text:#ece6dc;
+  --magenta:#ff2d7e;--purple:#b06bff;--muted:#9a938a;--dim:#827b72;
+  --line:rgba(240,230,220,.09);--line-2:rgba(240,230,220,.14);
+  --grad:linear-gradient(108deg,#a855f7 0%,#ff2d7e 100%);
+  --font:'Heebo',system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.65;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1000px;margin:0 auto;padding:0 28px}
+.grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+a{color:var(--purple);text-decoration:none}
+
+/* HEADER */
+.doc-head{position:relative;overflow:hidden;border-bottom:1px solid var(--line);padding:60px 0 56px}
+.doc-head .glow{position:absolute;width:620px;height:620px;border-radius:50%;background:radial-gradient(circle,rgba(176,107,255,.26),transparent 62%);filter:blur(70px);top:-300px;left:-140px;pointer-events:none}
+.doc-head .glow.b{background:radial-gradient(circle,rgba(255,45,126,.2),transparent 62%);left:auto;right:-160px;top:-200px}
+.doc-head .top{display:flex;align-items:center;justify-content:space-between;position:relative;z-index:2}
+.brand{font-family:'Poppins',sans-serif;font-weight:800;text-transform:lowercase;font-size:24px;letter-spacing:-.02em;color:var(--cream);direction:ltr;display:inline-flex;align-items:flex-end;line-height:1}
+.brand::after{content:"";width:.17em;height:.17em;background:var(--magenta);border-radius:1px;margin-left:.08em;margin-bottom:.04em}
+.doc-tag{font-size:12px;letter-spacing:.16em;color:var(--dim);font-weight:600}
+.doc-head h1{position:relative;z-index:2;font-weight:900;font-size:clamp(34px,6vw,68px);letter-spacing:-.035em;line-height:1.05;margin-top:40px}
+.doc-head .sub{position:relative;z-index:2;color:var(--muted);font-size:17px;margin-top:14px;font-weight:300;max-width:600px}
+
+/* SECTIONS */
+.sec{padding:52px 0;border-bottom:1px solid var(--line)}
+.sec:last-of-type{border-bottom:none}
+.sec-lab{display:flex;align-items:center;gap:11px;font-size:12.5px;font-weight:700;letter-spacing:.12em;color:var(--muted);margin-bottom:22px}
+.sec-lab .n{font-family:'Poppins',sans-serif;font-weight:800;font-size:13px;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sec h2{font-weight:800;font-size:clamp(23px,3.2vw,34px);letter-spacing:-.025em;margin-bottom:14px}
+.lede{color:var(--cream);font-size:19px;font-weight:400;line-height:1.7;max-width:760px}
+.body-text{color:var(--muted);font-size:16px;font-weight:300;white-space:pre-line;max-width:760px}
+.body-text b{color:var(--cream);font-weight:500}
+
+.pull{font-family:'Heebo';font-weight:800;font-size:clamp(26px,4.4vw,44px);letter-spacing:-.03em;line-height:1.15;margin:8px 0;max-width:820px}
+
+.grid{display:grid;gap:14px;margin-top:8px}
+.g2{grid-template-columns:1fr 1fr}
+.g3{grid-template-columns:repeat(3,1fr)}
+.card{background:var(--bg-2);border:1px solid var(--line);border-radius:14px;padding:24px 22px}
+.card h3{font-size:16px;font-weight:700;letter-spacing:-.01em;margin-bottom:8px}
+.card h3 .i{color:var(--magenta);font-family:'Poppins';font-weight:800;font-size:13px;margin-left:8px}
+.card p{font-size:14.5px;color:var(--muted);font-weight:300}
+
+.voice{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.voice .col{border:1px solid var(--line);border-radius:14px;padding:22px;background:var(--bg-2)}
+.voice .col.no{border-right:3px solid #e5484d}
+.voice .col.yes{border-right:3px solid #30a46c}
+.voice .col h4{font-size:13px;letter-spacing:.08em;color:var(--dim);font-weight:600;margin-bottom:14px}
+.voice .col p{font-size:15px;color:var(--cream);margin-bottom:10px;font-weight:400}
+.voice .col p::before{content:"„";color:var(--dim)}
+.voice .col p::after{content:"”";color:var(--dim)}
+
+.pills{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+.pill{border:1px solid var(--line-2);border-radius:100px;padding:9px 18px;font-size:15px;font-weight:500;color:var(--cream);background:var(--bg-2)}
+
+.tagline{font-family:'Heebo';font-weight:900;font-size:clamp(28px,5vw,52px);letter-spacing:-.035em;line-height:1.1;text-align:center;padding:14px 0}
+.tag-alt{display:flex;flex-direction:column;gap:12px;margin-top:24px}
+.tag-alt .t{border:1px solid var(--line);border-radius:12px;padding:16px 20px;background:var(--bg-2);font-weight:700;font-size:19px;letter-spacing:-.02em}
+.tag-alt .t span{color:var(--dim);font-weight:400;font-size:14px;display:block;margin-top:3px}
+
+/* palette */
+.swatches{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:8px}
+.sw{border-radius:12px;overflow:hidden;border:1px solid var(--line)}
+.sw .chip{height:82px}
+.sw .meta{padding:12px 14px;background:var(--bg-2)}
+.sw .meta b{display:block;font-size:14px}
+.sw .meta span{font-size:12px;color:var(--dim);font-family:monospace;direction:ltr;display:block}
+.wordmark-demo{font-family:'Poppins';font-weight:800;text-transform:lowercase;font-size:clamp(40px,8vw,80px);letter-spacing:-.03em;direction:ltr;display:inline-flex;align-items:flex-end;line-height:1;color:var(--cream);margin-top:8px}
+.wordmark-demo::after{content:"";width:.16em;height:.16em;background:var(--magenta);border-radius:2px;margin-left:.08em;margin-bottom:.05em}
+
+.note{background:var(--bg-2);border:1px solid var(--line);border-right:3px solid var(--purple);border-radius:12px;padding:18px 20px;color:var(--muted);font-size:15px;font-weight:300;white-space:pre-line;margin-top:18px}
+footer{padding:36px 0;text-align:center;color:var(--dim);font-size:13px;border-top:1px solid var(--line)}
+@media(max-width:680px){.g2,.g3,.voice,.swatches{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header class="doc-head"><div class="wrap">
+  <div class="glow"></div><div class="glow b"></div>
+  <div class="top">
+    <span class="brand">madhouse</span>
+    <span class="doc-tag">ספר מותג · Brand Book</span>
+  </div>
+  <h1>הטירוף <span class="grad">עובד.</span></h1>
+  <p class="sub">הבסיס שכל האתר, הקופי, הקמפיינים והעיצוב של MADHOUSE נשענים עליו. מי אנחנו, במה אנחנו מאמינים, ואיך אנחנו נשמעים.</p>
+</div></header>
+
+<!-- 01 ESSENCE -->
+<section class="sec"><div class="wrap">
+  <div class="sec-lab"><span class="n">01</span> הרעיון המרכזי</div>
+  <p class="pull">טירוף <span class="grad">מבוקר</span> שמייצר תוצאות.</p>
+  <p class="body-text" style="margin-top:18px">בכל סטודיו יש קצת שיגעון. אצלנו זה לב העניין. MADHOUSE הוא המקום שבו יצירתיות פרועה פוגשת מכונה מדויקת. אנחנו לא מפחדים מרעיונות מטורפים, אבל כל רעיון מטורף נרתם למערכת אחת שמביאה לעסק <b>לקוחות אמיתיים</b>. זה לא בלגן. זה טירוף עם משמעת.
+
+השם אומר הכל: בית של משוגעים, שבסופו של יום מוסר תוצאות. פחות שפיות, יותר תוצאות.</p>
+</div></section>
+
+<!-- 02 POSITIONING -->
+<section class="sec"><div class="wrap">
+  <div class="sec-lab"><span class="n">02</span> משפט המיצוב</div>
+  <p class="lede">לעסקים ישראליים שנמאס להם מסוכנויות שמוכרות קליקים וחזות יפה, <b>MADHOUSE</b> הוא הסטודיו הדיגיטלי שמחבר מותג, אתר, קמפיינים ואוטומציות למכונה אחת שמייצרת לקוחות, נמדד בלידים ובעלות רכישה ולא במדדי סרק. בשונה מסוכנויות תבניתיות, אנחנו מביאים יצירתיות אובססיבית, רתומה למנוע תוצאות.</p>
+</div></section>
+
+<!-- 03 MISSION -->
+<section class="sec"><div class="wrap">
+  <div class="sec-lab"><span class="n">03</span> ייעוד וחזון</div>
+  <div class="grid g2">
+    <div class="card"><h3>הייעוד</h3><p>להפוך עסקים ממי ש"קיים ברשת" למכונה שמייצרת לקוחות, חודש אחרי חודש. לחבר את כל החלקים (מותג, אתר, מדיה, אוטומציה) למערכת אחת שעובדת.</p></div>
+    <div class="card"><h3>החזון</h3><p>להיות הבית הדיגיטלי שעסקים בישראל רצים אליו כשהם רוצים תוצאות אמיתיות ולא עוד ספק, הבית שהופך שיווק מהוצאה למנוע צמיחה.</p></div>
+  </div>
+</div></section>
+
+<!-- 04 VALUES -->
+<section class="sec"><div class="wrap">
+  <div class="sec-lab"><span class="n">04</span> ערכי הליבה</div>
+  <div class="grid g3">
+    <div class="card"><h3>תוצאות מעל הכל <span class="i">01</span></h3><p>מדד ההצלחה הוא לידים ולקוחות ועלות רכישה, לא קליקים ולא לייקים.</p></div>
+    <div class="card"><h3>טירוף יצירתי <span class="i">02</span></h3><p>לא מפחדים מהרעיון הכי מטורף בחדר. בולטים, לא מתבלטים בבינוניות.</p></div>
+    <div class="card"><h3>אמת בלבד <span class="i">03</span></h3><p>בלי המלצות מזויפות, בלי מספרים מומצאים. מה שמראים, אמיתי.</p></div>
+    <div class="card"><h3>בעלות מלאה <span class="i">04</span></h3><p>מקצה לקצה. מותג, אתר, מדיה, אוטומציה, הכל תחת קורת גג אחת.</p></div>
+    <div class="card"><h3>שקיפות <span class="i">05</span></h3><p>בלי חוזים כובלים ובלי כוכביות. מחיר ברור אחרי אפיון קצר.</p></div>
+    <div class="card"><h3>אישי <span class="i">06</span></h3><p>צוות קטן ורעב. מולכם אנשים שמכירים את העסק שלכם בשם.</p></div>
+  </div>
+</div></section>
+
+<!-- 05 PERSONALITY -->
+<section class="sec"><div class="wrap">
+  <div class="sec-lab"><span class="n">05</span> אופי המותג</div>
+  <p class="body-text">אם MADHOUSE היה בן אדם, הוא היה המדען המטורף שהניסויים שלו דווקא עובדים. נועז, בטוח בעצמו, קצת פרובוקטיבי, אובססיבי לפרטים, אבל מתחת לטירוף, חד ומקצועי לגמרי. לא מנומס-קורפורטיבי, לא משעמם, ולא מתנצל.</p>
+  <div class="pills" style="margin-top:20px">
+    <span class="pill">נועז</span>
+    <span class="pill">בטוח</span>
+    <span class="pill">אובססיבי לתוצאות</span>
+    <span class="pill">פרובוקטיבי במידה</span>
+    <span class="pill">חד ומקצועי</span>
+    <span class="pill">אנושי, לא קורפורטיבי</span>
+  </div>
+</div></section>
+
+<!-- 06 VOICE -->
+<section class="sec"><div class="wrap">
+  <div class="sec-lab"><span class="n">06</span> קול וטון</div>
+  <p class="body-text" style="margin-bottom:22px">כותבים ישיר, קצר ובוטח. עברית טבעית, בגובה העיניים, בלי פלאף שיווקי ובלי מילים באנגלית באמצע משפט. מותר להתגרות, אסור להתאמץ.</p>
+  <div class="voice">
+    <div class="col yes"><h4>✔ ככה כן</h4>
+      <p>פחות שפיות. יותר תוצאות.</p>
+      <p>מחברים את כל החלקים למכונה אחת.</p>
+      <p>רואים את האתר חי, ורק אז משלמים.</p>
+    </div>
+    <div class="col no"><h4>✘ ככה לא</h4>
+      <p>אנו חברת שיווק מובילה ופורצת דרך.</p>
+      <p>פתרונות 360 מעלות בסטנדרט הגבוה ביותר.</p>
+      <p>נשמח לעמוד לרשותכם בכל עת.</p>
+    </div>
+  </div>
+</div></section>
+
+<!-- 07 MESSAGING -->
+<section class="sec"><div class="wrap">
+  <div class="sec-lab"><span class="n">07</span> עמודי המסר</div>
+  <div class="grid g2">
+    <div class="card"><h3>בית אחד, מכונה אחת</h3><p>מותג, אתר, מדיה ואוטומציה לא מדברים בנפרד. הכל מחובר למערכת אחת, אז שום ליד לא נופל בין הכיסאות.</p></div>
+    <div class="card"><h3>תוצאות, לא קליקים</h3><p>נמדדים בלקוחות ובעלות רכישה. לא בחשיפות, לא בלייקים, לא בהבטחות.</p></div>
+    <div class="card"><h3>הטירוף שבולט</h3><p>קריאייטיב נועז שגורם לעסק שלכם להיראות אחרת, לא עוד אתר תבניתי שנבלע ברעש.</p></div>
+    <div class="card"><h3>בלי סיכון, בלי כוכביות</h3><p>במודל MAGIX בונים לכם דמו אמיתי לפני שאתם משלמים. שקיפות מלאה, בלי התחייבות.</p></div>
+  </div>
+</div></section>
+
+<!-- 08 AUDIENCE -->
+<section class="sec"><div class="wrap">
+  <div class="sec-lab"><span class="n">08</span> קהל היעד</div>
+  <p class="body-text">עסקים ישראליים קטנים ובינוniים בצמיחה, על פני תחומים שונים לגמרי: אירועים ויוקרה, כושר וסטודיו, נדל"ן, משפט וטכנולוגיה, ביטוח ושירות, בנייה ומסחר. הליבה, בעלי עסקים שרוצים שותף לצמיחה, לא ספק שמוציא לוגו ונעלם.</p>
+  <div class="note">התובנה: הלקוח שלנו לא מחפש "עוד קמפיין". הוא מחפש מישהו שייקח אחריות על התוצאה מקצה לקצה, וידבר איתו בשפה אנושית ולא בז'רגון.</div>
+</div></section>
+
+<!-- 09 DIFFERENTIATORS -->
+<section class="sec"><div class="wrap">
+  <div class="sec-lab"><span class="n">09</span> במה אנחנו מנצחים</div>
+  <div class="pills">
+    <span class="pill">MAGIX, דמו לפני תשלום</span>
+    <span class="pill">אובססיה לתוצאות (CAC/ROAS)</span>
+    <span class="pill">בית אחד מקצה לקצה</span>
+    <span class="pill">סטאק AI ואוטומציות</span>
+    <span class="pill">צוות קטן ואישי</span>
+    <span class="pill">בלי חוזים כובלים</span>
+  </div>
+</div></section>
+
+<!-- 10 TAGLINES -->
+<section class="sec"><div class="wrap">
+  <div class="sec-lab"><span class="n">10</span> סלוגן ומשפטי מפתח</div>
+  <div class="tagline"><span class="grad">פחות שפיות. יותר תוצאות.</span></div>
+  <div class="tag-alt">
+    <div class="t">בית אחד, מכונה אחת.<span>למערך המשולב</span></div>
+    <div class="t">הטירוף עובד.<span>לרגעים נועזים / חתימה</span></div>
+    <div class="t">כאן כולם קצת מטורפים. וזה בדיוק העניין.<span>למניפסט / About</span></div>
+    <div class="t">רואים חי, ואז מחליטים.<span>ל-MAGIX</span></div>
+  </div>
+</div></section>
+
+<!-- 11 VISUAL -->
+<section class="sec"><div class="wrap">
+  <div class="sec-lab"><span class="n">11</span> זהות חזותית</div>
+  <h2>הוורדמרק</h2>
+  <p class="body-text">אותיות קטנות, Poppins כבד, עם נקודה מרובעת במגנטה בצד. נקי, בטוח, עכשווי. הנקודה היא ה"קליק" של הטירוף.</p>
+  <div class="wordmark-demo">madhouse</div>
+
+  <h2 style="margin-top:40px">פלטת צבעים</h2>
+  <div class="swatches">
+    <div class="sw"><div class="chip" style="background:#0b0a0c"></div><div class="meta"><b>רקע</b><span>#0B0A0C</span></div></div>
+    <div class="sw"><div class="chip" style="background:#ece6dc"></div><div class="meta"><b>קרם</b><span>#ECE6DC</span></div></div>
+    <div class="sw"><div class="chip" style="background:#ff2d7e"></div><div class="meta"><b>מגנטה</b><span>#FF2D7E</span></div></div>
+    <div class="sw"><div class="chip" style="background:#b06bff"></div><div class="meta"><b>סגול</b><span>#B06BFF</span></div></div>
+    <div class="sw"><div class="chip" style="background:linear-gradient(108deg,#a855f7,#ff2d7e)"></div><div class="meta"><b>גרדיאנט</b><span>a855f7 → ff2d7e</span></div></div>
+  </div>
+
+  <h2 style="margin-top:40px">טיפוגרפיה</h2>
+  <div class="grid g2" style="margin-top:8px">
+    <div class="card"><h3>כותרות ותצוגה</h3><p>Poppins (לוגו ומספרים) · Heebo כבד לכותרות עברית. עבה, צפוף, בטוח.</p></div>
+    <div class="card"><h3>גוף טקסט</h3><p>Heebo / Noto Sans Hebrew, משקל דק עד רגיל. נקי וקריא.</p></div>
+  </div>
+  <div class="note">כלל הזהב הויזואלי: רקע כהה קולנועי, משמעת של אקסנט גרדיאנט אחד, הרבה אוויר. הטירוף בא מהתוכן והתנועה, לא מעומס.</div>
+</div></section>
+
+<!-- 12 MANIFESTO -->
+<section class="sec"><div class="wrap">
+  <div class="sec-lab"><span class="n">12</span> המניפסט</div>
+  <p class="pull">כאן כולם קצת מטורפים.<br><span class="grad">וזה בדיוק העניין.</span></p>
+  <p class="body-text" style="margin-top:20px">כי שיווק שפוי מדי הוא שיווק שנשכח. אנחנו לא עושים בינוני, לא עושים תבניתי, ולא מוכרים לכם קליקים יפים על מצגת. אנחנו לוקחים את המותג, האתר, הקמפיינים והאוטומציות, זורקים הכל לאותו חדר, ומוציאים משם מכונה אחת שמביאה לכם לקוחות.
+
+זה נראה מטורף מבחוץ. מבפנים, זו השיטה. <b>פחות שפיות. יותר תוצאות.</b></p>
+</div></section>
+
+<footer><span class="brand" style="font-size:17px">madhouse</span> · ספר מותג · טיוטה ראשונה לעבודה</footer>
+
+</body>
+</html>
