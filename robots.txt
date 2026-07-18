@@ -38,4 +38,4 @@ User-agent: Bingbot
 Allow: /
 
 # Machine-readable site summary for LLMs: /llms.txt
-Sitemap: https://am-marketing.solutions/sitemap.xml
+Sitemap: https://madhouse.co.il/sitemap.xml
