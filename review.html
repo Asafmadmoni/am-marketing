@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>לוח סקירה · MADHOUSE</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;800;900&family=Poppins:wght@800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0b0a0c;--bg-2:#121016;--cream:#ece6dc;--muted:#9a938a;--dim:#827b72;--magenta:#ff2d7e;--purple:#b06bff;--line:rgba(240,230,220,.09);--grad:linear-gradient(108deg,#a855f7,#ff2d7e)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--cream);-webkit-font-smoothing:antialiased}
+.wrap{max-width:1240px;margin:0 auto;padding:0 28px}
+.grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+header{border-bottom:1px solid var(--line);padding:44px 0 36px}
+.brand{font-family:'Poppins';font-weight:800;text-transform:lowercase;font-size:22px;direction:ltr;display:inline-flex;align-items:flex-end;line-height:1}
+.brand::after{content:"";width:.17em;height:.17em;background:var(--magenta);border-radius:1px;margin-left:.08em;margin-bottom:.04em}
+header h1{font-weight:900;font-size:clamp(28px,4vw,44px);letter-spacing:-.03em;margin-top:26px}
+header p{color:var(--muted);font-weight:300;margin-top:10px;max-width:560px}
+.cat{padding:44px 0 8px}
+.cat-lab{display:flex;align-items:center;gap:12px;font-size:13px;font-weight:700;letter-spacing:.1em;color:var(--muted);margin-bottom:22px}
+.cat-lab::after{content:"";flex:1;height:1px;background:var(--line)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:var(--bg-2);border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:transform .35s cubic-bezier(.2,.8,.2,1),border-color .35s;text-decoration:none;color:inherit;display:block}
+.card:hover{transform:translateY(-6px);border-color:rgba(240,230,220,.2)}
+.thumb{aspect-ratio:16/10;background:#000;position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+.thumb img{width:100%;height:100%;object-fit:cover;object-position:top center}
+.badge{position:absolute;top:12px;right:12px;z-index:2;font-size:11px;font-weight:700;padding:5px 11px;border-radius:100px;background:rgba(11,10,12,.7);backdrop-filter:blur(6px);border:1px solid var(--line)}
+.badge.pick{background:var(--grad);color:#fff;border:none}
+.body{padding:18px 20px 20px}
+.body h3{font-size:18px;font-weight:700;letter-spacing:-.02em;display:flex;align-items:center;gap:8px}
+.body h3 .arr{color:var(--dim);font-size:16px;transition:transform .3s,color .3s}
+.card:hover h3 .arr{color:var(--magenta);transform:translateX(-4px)}
+.body p{color:var(--muted);font-size:13.5px;font-weight:300;margin-top:7px}
+.note{margin-top:44px;background:var(--bg-2);border:1px solid var(--line);border-right:3px solid var(--purple);border-radius:12px;padding:20px 22px;color:var(--muted);font-size:14.5px;font-weight:300}
+.note b{color:var(--cream);font-weight:600}
+footer{padding:40px 0;text-align:center;color:var(--dim);font-size:13px;border-top:1px solid var(--line);margin-top:50px}
+@media(max-width:900px){.grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <span class="brand">madhouse</span>
+  <h1>לוח סקירה <span class="grad">כל מה שבנינו.</span></h1>
+  <p>כל העיצובים והתכנים במקום אחד. לחיצה על כרטיס פותחת את העמוד החי. סמן לעצמך מה נשאר, מה מוחלף, ומה הכיוון.</p>
+</div></header>
+
+<div class="wrap">
+
+  <section class="cat">
+    <div class="cat-lab">דפי בית של MADHOUSE · צריך לבחור אחד</div>
+    <div class="grid">
+      <a class="card" href="https://am-marketing.solutions/" target="_blank"><div class="thumb"><span class="badge">גרסה A</span><img src="_review/home.jpg" alt=""></div><div class="body"><h3><span class="arr">↗</span> דף בית קינטי</h3><p>הירו טיפוגרפי עם מילה מתחלפת בגרדיאנט, אנרגטי ונועז.</p></div></a>
+      <a class="card" href="https://am-marketing.solutions/v2" target="_blank"><div class="thumb"><span class="badge">גרסה B</span><img src="_review/v2.jpg" alt=""></div><div class="body"><h3><span class="arr">↗</span> דף בית נקי</h3><p>זרימה מסודרת בסגנון פרפורמנס, שקט ומקצועי.</p></div></a>
+    </div>
+  </section>
+
+  <section class="cat">
+    <div class="cat-lab">עמודי מכירה ושירות</div>
+    <div class="grid">
+      <a class="card" href="https://am-marketing.solutions/magix" target="_blank"><div class="thumb"><span class="badge">MAGIX v1</span><img src="_review/magix.jpg" alt=""></div><div class="body"><h3><span class="arr">↗</span> MAGIX (גרסה 1)</h3><p>עמוד סטודיו האתרים, דמו לפני תשלום.</p></div></a>
+      <a class="card" href="https://am-marketing.solutions/magix-v2" target="_blank"><div class="thumb"><span class="badge">MAGIX v2</span><img src="_review/magixv2.jpg" alt=""></div><div class="body"><h3><span class="arr">↗</span> MAGIX (גרסה 2)</h3><p>גרסה שנייה של עמוד הסטודיו, לבחור אחת.</p></div></a>
+      <a class="card" href="https://am-marketing.solutions/google-ads" target="_blank"><div class="thumb"><img src="_review/gads.jpg" alt=""></div><div class="body"><h3><span class="arr">↗</span> גוגל אדס</h3><p>עמוד שירות קידום ולידים בגוגל אדס.</p></div></a>
+    </div>
+  </section>
+
+  <section class="cat">
+    <div class="cat-lab">תוכן ומסמכים</div>
+    <div class="grid">
+      <a class="card" href="https://am-marketing.solutions/blog" target="_blank"><div class="thumb"><img src="_review/blog.jpg" alt=""></div><div class="body"><h3><span class="arr">↗</span> בלוג פרפורמנס</h3><p>6 מאמרים על לידים, גוגל אדס ושיווק נמדד.</p></div></a>
+      <a class="card" href="https://am-marketing.solutions/brand-madhouse" target="_blank"><div class="thumb"><span class="badge">פנימי</span><img src="_review/brand.jpg" alt=""></div><div class="body"><h3><span class="arr">↗</span> ספר מותג</h3><p>הבסיס: מיצוב, ערכים, קול, זהות חזותית.</p></div></a>
+      <a class="card" href="https://am-marketing.solutions/brief-dniv" target="_blank"><div class="thumb"><span class="badge">פנימי</span><img src="_review/brief.jpg" alt=""></div><div class="body"><h3><span class="arr">↗</span> תיק אפיון ד.ניב</h3><p>אפיון לקוח מסודר, תבנית לכל שאלון עתידי.</p></div></a>
+    </div>
+  </section>
+
+  <section class="cat">
+    <div class="cat-lab">אתרי לקוחות שמתארחים אצלנו</div>
+    <div class="grid">
+      <a class="card" href="https://am-marketing.solutions/studio5/" target="_blank"><div class="thumb"><img src="_review/studio5.jpg" alt=""></div><div class="body"><h3><span class="arr">↗</span> studio five</h3><p>טל בן שמעון, עיצוב פנים. אתר תדמית קולנועי.</p></div></a>
+      <a class="card" href="https://am-marketing.solutions/dini/" target="_blank"><div class="thumb"><img src="_review/dini.jpg" alt=""></div><div class="body"><h3><span class="arr">↗</span> Dini</h3><p>משפך שאלון נפיחות, אפליקציית quiz בעברית.</p></div></a>
+      <a class="card" href="https://am-marketing.solutions/yesh/" target="_blank"><div class="thumb"><img src="_review/yesh.jpg" alt=""></div><div class="body"><h3><span class="arr">↗</span> יש קולקטיב</h3><p>סוכנות ביטוח, אתר ומערך לידים.</p></div></a>
+      <a class="card" href="https://am-marketing.solutions/burge/" target="_blank"><div class="thumb"><img src="_review/burge.jpg" alt=""></div><div class="body"><h3><span class="arr">↗</span> בורג' בנימינה</h3><p>אולם אירועים בין מטעי האבוקדו.</p></div></a>
+    </div>
+  </section>
+
+  <div class="note">
+    <b>שלוש החלטות שמחכות לך:</b><br>
+    1. איזה דף בית, קינטי (A) או נקי (B).<br>
+    2. איזה עמוד MAGIX, גרסה 1 או 2.<br>
+    3. מבנה דפי הנחיתה של MADHOUSE, נבנה על בסיס הכיוון שתבחר.<br><br>
+    הערה: הלינקים פתוחים כרגע דרך הדומיין הנוכחי. אחרי המעבר הם יעברו אוטומטית ל-madhouse.co.il.
+  </div>
+</div>
+
+<footer><span class="brand" style="font-size:15px">madhouse</span> · לוח סקירה פנימי</footer>
+</body>
+</html>
