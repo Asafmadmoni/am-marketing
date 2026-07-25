@@ -844,10 +844,30 @@
     <span class="eyebrow" style="justify-content:center">מוכנים להתחיל?</span>
     <h2 style="margin-top:26px">בואו נבנה משהו <span class="grad">מטורף</span>.</h2>
     <p>שיחה קצרה, ונבין אם אנחנו ההתאמה הנכונה. בלי התחייבות, עם כיוון.</p>
-    <div class="cta-actions">
-      <a href="mailto:asafmadmoni1@gmail.com" class="btn btn-primary mag">דברו איתנו <span class="ar">←</span></a>
-      <a href="https://wa.me/972500000000" target="_blank" rel="noopener" class="btn btn-ghost mag">וואטסאפ <span class="ar">←</span></a>
-    </div>
+    <style>
+      .lform{max-width:520px;margin:34px auto 0;text-align:right;display:grid;gap:12px}
+      .lform .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+      .lform input,.lform textarea{width:100%;font-family:inherit;font-size:15px;color:var(--text);background:rgba(240,230,220,.03);border:1px solid var(--line);border-radius:12px;padding:14px 16px;transition:border-color .25s,background .25s}
+      .lform input:focus,.lform textarea:focus{outline:none;border-color:var(--magenta);background:rgba(240,230,220,.05)}
+      .lform textarea{min-height:96px;resize:vertical}
+      .lform button{margin-top:4px;justify-content:center}
+      .lform .hp{position:absolute;left:-9999px}
+      @media(max-width:520px){.lform .row{grid-template-columns:1fr}}
+    </style>
+    <form class="lform" action="https://formsubmit.co/asafmadmoni1@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="ליד חדש מהאתר MADHOUSE">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_next" value="https://madhouse.co.il/?sent=1">
+      <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off">
+      <div class="row">
+        <input type="text" name="שם" placeholder="שם מלא" required>
+        <input type="tel" name="טלפון" placeholder="טלפון" required>
+      </div>
+      <input type="email" name="אימייל" placeholder="אימייל">
+      <textarea name="מה תרצו לבנות" placeholder="על מה חשבתם? (אתר, מותג, קמפיינים...)"></textarea>
+      <button type="submit" class="btn btn-primary mag">שלחו, ונחזור אליכם <span class="ar">←</span></button>
+    </form>
   </div></div></section>
 
   </main>
