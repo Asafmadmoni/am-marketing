@@ -96,6 +96,7 @@
   .eyebrow{display:inline-flex;align-items:center;gap:12px;font-weight:600;font-size:12.5px;letter-spacing:.16em;color:var(--muted)}
   .eyebrow .n{font-weight:700;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;font-variant-numeric:tabular-nums}
   .eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--grad)}
+  .eyebrow:has(.n)::before{display:none}
 
   .sec{padding:150px 0}
   .sec-head{max-width:840px;margin-bottom:74px}
@@ -649,7 +650,6 @@
       <div class="work-card anim fade"><div class="wc-media"><div class="wc-bar"><i></i><i></i><i></i></div><img src="w-technika.jpg" alt="טכניקה" loading="lazy"></div><div class="wc-body"><div><div class="k">הפקת אירועים</div><h3>טכניקה</h3><div class="res">אתר תדמית ומיתוג</div></div><span class="arr">↗</span></div></div>
       <a href="https://memora.co.il/" target="_blank" rel="noopener" class="work-card anim fade"><div class="wc-media"><div class="wc-bar"><i></i><i></i><i></i></div><img src="w-memora.jpg" alt="Memora" loading="lazy"></div><div class="wc-body"><div><div class="k">טכנולוגיה</div><h3>Memora</h3><div class="res">אתר ומערך לידים</div></div><span class="arr">↗</span></div></a>
     </div>
-    <p class="work-note">פרויקטים אמיתיים מלקוחות הסטודיו, על פני תחומים שונים לגמרי.</p>
   </div></section>
 
   <!-- RESULTS -->
@@ -840,17 +840,6 @@
     </div>
   </div></section>
 
-  <!-- STATS -->
-  <section class="stats"><div class="wrap">
-    <div class="stats-inner anim fade"><div class="stats-grid">
-      <div class="stat"><div class="num"><span data-count="150" data-suffix="+">0</span></div><div class="lab">פרויקטים שהושקו</div><div class="spark"><svg viewBox="0 0 96 24" fill="none"><polyline points="2,20 18,17 34,18 50,12 66,13 82,6 94,3" stroke="#ff2d7e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
-      <div class="stat"><div class="num"><span data-count="100" data-suffix="+">0</span></div><div class="lab">לקוחות מרוצים</div><div class="spark"><svg viewBox="0 0 96 24" fill="none"><polyline points="2,19 18,16 34,17 50,11 66,9 82,7 94,4" stroke="#b06bff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
-      <div class="stat"><div class="num"><span data-count="4" data-suffix="M+">0</span></div><div class="lab">חשיפות בקמפיינים</div><div class="spark"><svg viewBox="0 0 96 24" fill="none"><polyline points="2,21 18,19 34,15 50,16 66,10 82,6 94,2" stroke="#ff2d7e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
-      <div class="stat"><div class="num"><span data-count="6" data-suffix="">0</span></div><div class="lab">שנות ניסיון</div><div class="spark"><svg viewBox="0 0 96 24" fill="none"><polyline points="2,18 18,17 34,15 50,14 66,11 82,9 94,6" stroke="#b06bff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
-    </div></div>
-    <p class="stats-note">המספרים להמחשה. נעדכן לנתונים האמיתיים שלכם.</p>
-  </div></section>
-
   <!-- WORDMARK BAND -->
   <section class="wordband" id="wordband">
     <div class="src l"></div><div class="src r"></div>
@@ -903,7 +892,9 @@
     <style>
       .lform{max-width:520px;margin:34px auto 0;text-align:right;display:grid;gap:12px}
       .lform .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-      .lform input,.lform textarea{width:100%;font-family:inherit;font-size:15px;color:var(--text);background:rgba(240,230,220,.03);border:1px solid var(--line);border-radius:12px;padding:14px 16px;transition:border-color .25s,background .25s}
+      .lform input,.lform textarea,.lform select{width:100%;font-family:inherit;font-size:15px;color:var(--text);background:rgba(240,230,220,.03);border:1px solid var(--line);border-radius:12px;padding:14px 16px;transition:border-color .25s,background .25s}
+      .lform select{appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%239a938a' stroke-width='1.5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:left 16px center;color:var(--muted)}
+      .lform select:valid{color:var(--text)}
       .lform input:focus,.lform textarea:focus{outline:none;border-color:var(--magenta);background:rgba(240,230,220,.05)}
       .lform textarea{min-height:96px;resize:vertical}
       .lform button{margin-top:4px;justify-content:center}
@@ -921,7 +912,27 @@
         <input type="tel" name="טלפון" placeholder="טלפון" required>
       </div>
       <input type="email" name="אימייל" placeholder="אימייל">
-      <textarea name="מה תרצו לבנות" placeholder="על מה חשבתם? (אתר, מותג, קמפיינים...)"></textarea>
+      <div class="row">
+        <select name="במה מעניין אתכם" required>
+          <option value="" disabled selected>במה אתם מעוניינים?</option>
+          <option>קידום ולידים בגוגל אדס</option>
+          <option>קמפיינים במטא (פייסבוק/אינסטגרם)</option>
+          <option>בניית אתר / דף נחיתה</option>
+          <option>מיתוג ולוגו</option>
+          <option>אוטומציות ובוטים</option>
+          <option>הטמעת AI בארגון</option>
+          <option>כמה דברים / לא בטוח</option>
+        </select>
+        <select name="תקציב חודשי לפרסום">
+          <option value="" disabled selected>תקציב חודשי לפרסום (אם רלוונטי)</option>
+          <option>עד ₪3,000</option>
+          <option>₪3,000–₪7,000</option>
+          <option>₪7,000–₪15,000</option>
+          <option>₪15,000+</option>
+          <option>לא ממומן / לא רלוונטי</option>
+        </select>
+      </div>
+      <textarea name="מה תרצו לבנות" placeholder="עוד פרטים? (לא חובה)"></textarea>
       <button type="submit" class="btn btn-primary mag">שלחו, ונחזור אליכם <span class="ar">←</span></button>
     </form>
   </div></div></section>
