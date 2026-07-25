@@ -54,7 +54,7 @@
 
 
   .glow{position:absolute;border-radius:50%;filter:blur(110px);z-index:0;pointer-events:none}
-  .grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .grad{color:var(--cream)}
 
   /* preloader (pure CSS, always completes) */
   #preload{position:fixed;inset:0;z-index:9999;background:#0b0a0c;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;animation:preOut .8s cubic-bezier(.76,0,.24,1) 1.7s forwards}
@@ -210,7 +210,7 @@
   .svc-arrow{font-size:26px;color:var(--dim);transition:transform .35s var(--ease),color .3s}
   .svc-row:hover{padding-right:28px}
   .svc-row:hover .svc-main h3{transform:translateX(-8px)}
-  .svc-row:hover .svc-main h3 .grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .svc-row:hover .svc-main h3 .grad{color:var(--cream)}
   .svc-row:hover .svc-main p{color:var(--muted)}
   .svc-row:hover .svc-arrow{color:var(--magenta);transform:translateX(-8px)}
   .svc-reveal{position:fixed;z-index:90;width:300px;height:210px;border-radius:12px;overflow:hidden;pointer-events:none;
@@ -842,7 +842,7 @@
   <!-- CTA -->
   <section class="cta" id="contact"><div class="glow"></div><div class="wrap"><div class="cta-inner anim fade">
     <span class="eyebrow" style="justify-content:center">מוכנים להתחיל?</span>
-    <h2 style="margin-top:26px">בואו נבנה משהו <span class="grad">מטורף</span>.</h2>
+    <h2 style="margin-top:26px">בואו נבנה משהו טוב.</h2>
     <p>שיחה קצרה, ונבין אם אנחנו ההתאמה הנכונה. בלי התחייבות, עם כיוון.</p>
     <style>
       .lform{max-width:520px;margin:34px auto 0;text-align:right;display:grid;gap:12px}
@@ -948,11 +948,7 @@
           if(lab){lab.classList.add('on');}dot.style.opacity=0;ring.style.opacity=0;
         });
         c.addEventListener('pointerleave',hideLabel);
-      });
-      // magnetic buttons
-      document.querySelectorAll('.mag').forEach(function(b){
-        b.addEventListener('mousemove',function(e){var r=b.getBoundingClientRect();var x=e.clientX-(r.left+r.width/2);var y=e.clientY-(r.top+r.height/2);b.style.transform='translate('+x*.25+'px,'+y*.3+'px)';});
-        b.addEventListener('mouseleave',function(){b.style.transform='';});
+      });        b.addEventListener('mouseleave',function(){b.style.transform='';});
       });
       document.querySelectorAll('.svc-row[data-img]').forEach(function(row){
         var px=null,py=null;
