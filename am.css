@@ -90,6 +90,7 @@ nav{display:flex;align-items:center;justify-content:space-between;height:74px}
   radial-gradient(120% 120% at 80% 0,rgba(176,107,255,.24),transparent 55%),radial-gradient(100% 100% at 0 100%,rgba(255,45,126,.17),transparent 55%),var(--bg-3)}
 .blog-card .thumb .k{position:absolute;top:14px;right:14px;font-size:11px;font-weight:700;letter-spacing:.1em;color:var(--text);background:rgba(11,10,12,.7);border:1px solid var(--line);border-radius:6px;padding:5px 10px}
 .blog-card .thumb .big{display:none}
+.blog-card .thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:2}
 .blog-card .thumb::after{content:"";position:absolute;left:18px;bottom:16px;width:26px;height:26px;border-radius:7px;background:var(--grad);box-shadow:0 6px 20px -4px rgba(255,45,126,.6);transition:transform .4s var(--ease)}
 .blog-card .thumb::before{content:"";position:absolute;right:-40px;top:-40px;width:150px;height:150px;border-radius:50%;background:radial-gradient(circle,rgba(176,107,255,.3),transparent 70%);filter:blur(10px)}
 .blog-card:hover .thumb::after{transform:scale(1.15) rotate(-8deg)}
